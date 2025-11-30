@@ -1,0 +1,33 @@
+
+
+  .daniel-intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bio-image {
+    width: 90%;
+    max-width: 1200px;
+    margin: -20px 0 0 0;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    left: 19%;
+    color: white;
+    max-width: 30%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .overlay-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
