@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import AboutSection from '../components/RightSection';
-import Daniel from "../media/home/daniel.png";
-import Rice from "../media/home/rice.png";
-import Family from "../media/home/fam.png";
-import RightSection from '../components/RightSection';
-import LeftSection from "../components/LeftSection";
+import Daniel from "/danielweb/media/home/daniel.png";
+import Rice from "/danielweb/media/home/rice.png";
+import Family from "/danielweb/media/home/fam.png";
+import RightSection from '/danielweb/components/RightSection';
+import LeftSection from "/danielweb/components/LeftSection";
 
 
 const HomePage = () => {

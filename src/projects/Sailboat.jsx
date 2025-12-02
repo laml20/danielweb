@@ -1,6 +1,6 @@
 import React from "react";
 import RightSection from "../components/RightSection";
-import Daniel from "../media/home/daniel.png";
+import Daniel from "/danielweb/media/home/daniel.png";
 
 export default function Sailboat() {
 return (
