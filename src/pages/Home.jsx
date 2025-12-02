@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import AboutSection from '../components/RightSection';
-import Daniel from "../media/daniel.png";
-import Rice from "../media/rice.png";
-import Family from "../media/fam.png";
+import Daniel from "../media/home/daniel.png";
+import Rice from "../media/home/rice.png";
+import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
 import LeftSection from "../components/LeftSection";
 
