@@ -23,16 +23,16 @@ function App() {
         {/* Only this part changes when you switch routes */}
         <main className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
-            <Route path="/projects/automated-capsule-vending-machine" element={<Vending />} />
-            <Route path="/projects/vibrational-glove-for=parkinsons-disease" element={<Glove />} />
-            <Route path="/projects/handwriting-assistance-device" element={<HandAssist />} />
-            <Route path="/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
-            <Route path="/creative" element={<Creative />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/danielweb/" element={<Home />} />
+            <Route path="/danielweb/resume" element={<Resume />} />
+            <Route path="/danielweb/projects" element={<Projects />} />
+            <Route path="/danielweb/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
+            <Route path="/danielweb/projects/automated-capsule-vending-machine" element={<Vending />} />
+            <Route path="/danielweb/projects/vibrational-glove-for=parkinsons-disease" element={<Glove />} />
+            <Route path="/danielweb/projects/handwriting-assistance-device" element={<HandAssist />} />
+            <Route path="/danielweb/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
+            <Route path="/danielweb/creative" element={<Creative />} />
+            <Route path="/danielweb/about" element={<About />} />
           </Routes>
         </main>
         <Footer></Footer>
