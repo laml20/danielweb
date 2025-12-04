@@ -31,8 +31,8 @@ a:hover {
 
 body {
     font-family: "Martian Mono", monospace;
-
   margin: 0;
+  padding: 0;
   display: inherit;
   min-width: 320px;
   min-height: 100vh;

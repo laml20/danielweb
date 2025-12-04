@@ -21,17 +21,13 @@ export default function LeftSection({
             background-repeat: no-repeat;
           }
   
-          // .section div {
-          //   margin: 0 0 0 10%;
-          // }
-  
           .textpart {
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: left;
             width: 90%;
-            padding: 0 0 0 13%;
+            padding: 0 0 0 15%;
           }
 
           .textpart button {
