@@ -39,14 +39,14 @@ const Projects = () => {
         }
       ];
     return(
-    <div>
+    <Container style={{padding: '3% 10%'}}>
         <h1>Projects</h1>
                 {/* Projects Gallery */}
                 <section className="projects-gallery py-5">
           <Row className="g-4">
             {projects.map((project) => (
               <Col key={project.id} md={4}>
-                <div className="card h-100 border-0 shadow-sm">
+                <div className="card h-100">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -73,7 +73,7 @@ const Projects = () => {
             ))}
           </Row>
         </section>
-    </div>
+    </Container>
     );
 };
 

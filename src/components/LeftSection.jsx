@@ -2,26 +2,28 @@ import { Link } from "react-router-dom";
 
 //  This is a section with text on the left and an image on the right
 export default function LeftSection({
-    title = "hello",
-    subtitle = "i'm daniel and i'm a mechanical engineer passionate about stuff",
-    buttonText = "projects",
-    buttonLink = null, // null means no link
+    heading = null,
+    title = "Title",
+    text = "Text",
+    buttonText = null,
+    buttonLink = null,
     imageSrc = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
     backgroundImage = null
   }) {
     return (
       <>
         <style>{`
-          .section {
+          .leftsection {
             display: grid;
             grid-template-columns: auto auto;
-            margin: 3% 10%;
+            margin: 2% 5%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            max-height: 450px;
           }
   
-          .textpart {
+          .lefttextpart {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,35 +32,35 @@ export default function LeftSection({
             padding: 0 0 0 15%;
           }
 
-          .textpart button {
+          .lefttextpart button {
             width: auto; 
             align-self: flex-start;
           }
   
-          .imgpart {
+          .leftimgpart {
             display: flex;
             justify-content: flex-end;
             align-items: center;
           }
   
-          .imgpart img {
+          .leftimgpart img {
             max-height: 500px;
             height: 87%;
-            padding: 10% 5% 0;
+            padding: 10% 17% 0;
           }
         `}</style>
   
         <div
-          className="section"
+          className="leftsection"
           style={
             backgroundImage
               ? { backgroundImage: `url(${backgroundImage})` }
               : {}
           }
         >
-          <div className="textpart">
+          <div className="lefttextpart">
             <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
-            <p>{subtitle}</p>
+            <p>{text}</p>
             {buttonLink ? (
             <Link to={buttonLink}>
               <button>{buttonText}</button>
@@ -68,7 +70,7 @@ export default function LeftSection({
           )}
           </div>
   
-          <div className="imgpart">
+          <div className="leftimgpart">
             <img src={imageSrc} alt="section visual" />
           </div>
         </div>
