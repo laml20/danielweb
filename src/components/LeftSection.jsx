@@ -61,13 +61,15 @@ export default function LeftSection({
           <div className="lefttextpart">
             <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
             <p>{text}</p>
-            {buttonLink ? (
-            <Link to={buttonLink}>
-              <button>{buttonText}</button>
-            </Link>
-          ) : (
-            <button>{buttonText}</button>
-          )}
+            {buttonText && (
+              buttonLink ? (
+                <Link to={buttonLink}>
+                  <button>{buttonText}</button>
+                </Link>
+              ) : (
+                <button>{buttonText}</button>
+              )
+            )}
           </div>
   
           <div className="leftimgpart">
@@ -77,4 +79,3 @@ export default function LeftSection({
       </>
     );
   }
-  

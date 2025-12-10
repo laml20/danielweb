@@ -11,14 +11,23 @@ import Vending from "./projects/Vending";
 import Foot from "./projects/Foot";
 import Glove from "./projects/Glove";
 import HandAssist from "./projects/HandAssist";
-import bkgd from "./media/home/fam.png";
+import bkgd from "./media/home/background.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
     <Router basename="/danielweb">
-      <div className="app" style={{backgroundImage: {bkgd}}}>
+      <div
+        className="app"
+        style={{
+          backgroundImage: `url(${bkgd})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "100vh",
+        }}
+      >
         <Header />
         <main className="content">
           <Routes>
