@@ -1,3 +1,3 @@
 export default function Creative() {
-    return <h2>Creative Page</h2>;
+    return <h1>Creative Page</h1>;
   }

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <Navbar expand="lg" sticky="top">
-      <Container style={{padding: "20px 0px 0px 0px", background: "#FFFFFF"}}>
+    <Navbar expand="lg" sticky="top" style={{ margin: 0, padding: 0 }}>
+      <Container style={{ paddingTop: "20px", paddingBottom: "20px", background: "#FFFFFF" }}>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
           Daniel Plascencia Segura
         </Navbar.Brand>

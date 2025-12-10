@@ -2,30 +2,31 @@ import { Link } from "react-router-dom";
 
 // This is a section with text on the right and an image on the left
 export default function RightSection({
-    title = "hello",
-    subtitle = "i'm daniel and i'm a mechanical engineer passionate about stuff",
-    buttonText = "projects",
-    buttonLink = null, // null means no link
+    heading = null,
+    title = "Title",
+    text = "Lorem ipsum random text",
+    buttonText = null,
+    buttonLink = null,
     imageSrc = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
     backgroundImage = null
   }) {
     return (
       <>
         <style>{`
-          .section {
+          .rightsection {
             display: grid;
-            grid-template-columns: auto auto;
-            margin: 3% 10%;
+            grid-template-columns: 50% 50%;
+            margin: 2% 15%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
           }
   
-          .section div {
+          .rightsection div {
             margin: 0;
           }
   
-          .textpart {
+          .righttextpart {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -34,37 +35,37 @@ export default function RightSection({
             padding: 0;
           }
 
-          .textpart button {
-            width: auto;       /* make button only as wide as its content */
-            align-self: flex-start; /* optional: aligns left inside flex column */
+          .righttextpart button {
+            width: auto;     
+            align-self: flex-start; 
           }
   
-          .imgpart {
+          .rightimgpart {
             display: flex;
             justify-content: flex-end;
             align-items: center;
           }
   
-          .imgpart img {
-            max-height: 400px;
-            padding: 10% 20% 0;
+          .rightimgpart img {
+            max-height: 350px;
+            padding: 0% 25% 0% 0%;
           }
         `}</style>
   
         <div
-          className="section"
+          className="rightsection"
           style={
             backgroundImage
               ? { backgroundImage: `url(${backgroundImage})` }
               : {}
           }
         >
-                  <div className="imgpart">
+                  <div className="rightimgpart">
             <img src={imageSrc} alt="section visual" />
           </div>
-          <div className="textpart">
+          <div className="righttextpart">
             <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
-            <p>{subtitle}</p>
+            <p>{text}</p>
             {buttonLink ? (
             <Link to={buttonLink}>
               <button>{buttonText}</button>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
-import AboutSection from '../components/RightSection';
-import Daniel from "../media/daniel.png";
-import Rice from "../media/rice.png";
-import Family from "../media/fam.png";
+import Daniel from "../media/home/daniel.png";
+import Rice from "../media/home/rice.png";
+import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
 import LeftSection from "../components/LeftSection";
-
+import Experience from "../components/Experience";
 
 const HomePage = () => {
   const projects = [
@@ -35,66 +34,29 @@ const HomePage = () => {
 
   return (
     <div>
+            <Container>
+
       <LeftSection
         title="HELLO!"
-        subtitle="I'm Daniel and I'm super passionate about mechanical engineering and stuff'"
+        text="I'm Daniel and I'm super passionate about mechanical engineering and stuff'"
         buttonText="Projects"
         buttonLink="/projects"
         imageSrc={Daniel}
         backgroundImage={Rice}
       />
 
-      <Container>
-        {/* My Experience Section */}
-        <section style={{ textAlign: 'center', padding: '1.5rem 0' }}>
-          <div style={{ 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center',
-            gap: '3rem',
-            flexWrap: 'wrap'
-          }}>
-            <h3 style={{ 
-              fontFamily: 'monospace', 
-              margin: 0 
-            }}>
-              My Experience
-            </h3>
-            <button 
-              style={{
-                padding: '0.5rem 2rem',
-                border: '2px solid black',
-                backgroundColor: 'white',
-                color: 'black',
-                cursor: 'pointer',
-                fontFamily: 'monospace'
-              }}
-              onClick={() => openPdfModal('/path/to/cv.pdf', 'Curriculum Vitae')}
-            >
-              Curriculum Vitae
-            </button>
-            <button 
-              style={{
-                padding: '0.5rem 2rem',
-                border: '2px solid black',
-                backgroundColor: 'white',
-                color: 'black',
-                cursor: 'pointer',
-                fontFamily: 'monospace'
-              }}
-              onClick={() => openPdfModal('/path/to/resume.pdf', 'Resume')}
-            >
-              Resume
-            </button>
-          </div>
-        </section>
+      <Experience></Experience>
 
-        {/* Video Section */}
-        <section className="video-section py-5">
-          <div className="ratio ratio-16x9 mb-5" style={{width: '70%'}}>
+      <section className="video-section py-5" style={{display: 'flex', justifyContent: 'center'}}>
+          <div className="ratio ratio-16x9 mb-5" style={{width: '65%'}}>
           <iframe  src="https://www.youtube.com/embed/IPjDeEaensU?si=NZfhSi-nU1ba_O-T" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
         </section>
+
+        
+
+        {/* Video Section */}
+
 
         <Carousel>
       <Carousel.Item>
@@ -124,7 +86,7 @@ const HomePage = () => {
 
         <RightSection 
           title="About Me"
-          subtitle="I'm daniel, and i'm from california yeehaw"
+          text="I'm daniel, and i'm from california yeehaw"
           buttonText="read more"
           buttonLink="/about"
           imageSrc={Family}

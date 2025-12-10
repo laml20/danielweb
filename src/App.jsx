@@ -11,16 +11,15 @@ import Vending from "./projects/Vending";
 import Foot from "./projects/Foot";
 import Glove from "./projects/Glove";
 import HandAssist from "./projects/HandAssist";
+import bkgd from "./media/home/fam.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div className="app">
+    <Router basename="/danielweb">
+      <div className="app" style={{backgroundImage: {bkgd}}}>
         <Header />
-
-        {/* Only this part changes when you switch routes */}
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,7 +34,7 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Router>
   );
