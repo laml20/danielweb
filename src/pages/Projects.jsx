@@ -1,39 +1,40 @@
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
+import Daniel from "../media/home/daniel.png";
 
 const Projects = () => {
   const basePath = '/danielweb'; // Define the base path
   const projects = [
       {
         id: 1,
-        image: 'https://via.placeholder.com/400x300',
+        image: Daniel,
         title: 'Autonomous Sailboat',
         description: 'So basically the main idea of this is we want to be able to design two fully',
         link: `${basePath}/projects/autonomous-sailboat-fleet`
       },
       {
         id: 2,
-        image: 'https://via.placeholder.com/400x300',
+        image: Daniel,
         title: 'vending',
         description: 'Project description goes here',
         link: `${basePath}/projects/automated-capsule-vending-machine`
       },
       {
         id: 3,
-        image: 'https://via.placeholder.com/400x300',
+        image: Daniel,
         title: 'glove',
         description: 'Project description goes here',
         link: `${basePath}/projects/vibrational-glove-for=parkinsons-disease`
       },
       {
           id: 4,
-          image: 'https://via.placeholder.com/400x300',
+          image: Daniel,
           title: 'hand',
           description: 'Project description goes here',
           link: `${basePath}/projects/handwriting-assistance-device`
         },
       {
           id: 5,
-          image: 'https://via.placeholder.com/400x300',
+          image: Daniel,
           title: 'foot',
           description: 'Project description goes here',
           link: `${basePath}/projects/sensory-feedback-for-smart-prosthetics`
@@ -47,7 +48,7 @@ const Projects = () => {
         <Row className="g-4">
           {projects.map((project) => (
             <Col key={project.id} md={4}>
-              <div className="card h-100">
+              <div className="card h-100" style={{backgroundColor: 'transparent', border: '0px'}}>
                 <img 
                   src={project.image} 
                   alt={project.title}

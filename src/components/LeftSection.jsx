@@ -16,7 +16,7 @@ export default function LeftSection({
           .leftsection {
             display: grid;
             grid-template-columns: auto auto;
-            margin: 2% 5%;
+            margin: 3% 5%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
