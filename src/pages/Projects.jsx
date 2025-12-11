@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; // Add this import
 import { useState } from 'react';
 import Daniel from "../media/home/daniel.png";
 
@@ -6,42 +7,41 @@ const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
-  const basePath = '/danielweb'; // Define the base path
   const projects = [
       {
         id: 1,
         image: Daniel,
         title: 'Autonomous Sailboat',
         description: 'So basically the main idea of this is we want to be able to design two fully',
-        link: `${basePath}/projects/autonomous-sailboat-fleet`
+        link: '/projects/autonomous-sailboat-fleet' // Remove basePath, just use the route
       },
       {
         id: 2,
         image: Daniel,
         title: 'vending',
         description: 'Project description goes here',
-        link: `${basePath}/projects/automated-capsule-vending-machine`
+        link: '/projects/automated-capsule-vending-machine'
       },
       {
         id: 3,
         image: Daniel,
         title: 'glove',
         description: 'Project description goes here',
-        link: `${basePath}/projects/vibrational-glove-for=parkinsons-disease`
+        link: '/projects/vibrational-glove-for=parkinsons-disease'
       },
       {
           id: 4,
           image: Daniel,
           title: 'hand',
           description: 'Project description goes here',
-          link: `${basePath}/projects/handwriting-assistance-device`
+          link: '/projects/handwriting-assistance-device'
         },
       {
           id: 5,
           image: Daniel,
           title: 'foot',
           description: 'Project description goes here',
-          link: `${basePath}/projects/sensory-feedback-for-smart-prosthetics`
+          link: '/projects/sensory-feedback-for-smart-prosthetics'
       }
     ];
 
@@ -66,13 +66,12 @@ const Projects = () => {
   return(
   <Container style={{padding: '3% 10%'}}>
       <h1>Projects</h1>
-              {/* Projects Gallery */}
-              <section className="projects-gallery py-5">
+      <section className="projects-gallery py-5">
         <Row className="g-3">
           {projects.map((project) => (
             <Col key={project.id} md={4}>
-              <a 
-                href={project.link} 
+              <Link 
+                to={project.link}  // Change href to "to"
                 style={{ textDecoration: 'none', color: 'inherit' }}
                 onMouseEnter={() => setHoveredCard(project.id)}
                 onMouseLeave={handleMouseLeave}
@@ -128,7 +127,7 @@ const Projects = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </Col>
           ))}
         </Row>
