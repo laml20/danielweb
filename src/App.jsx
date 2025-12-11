@@ -36,7 +36,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
             <Route path="/projects/automated-capsule-vending-machine" element={<Vending />} />
-            <Route path="/projects/vibrational-glove-for=parkinsons-disease" element={<Glove />} />
+            <Route path="/projects/vibrational-glove-for-parkinsons-disease" element={<Glove />} />
             <Route path="/projects/handwriting-assistance-device" element={<HandAssist />} />
             <Route path="/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
             <Route path="/creative" element={<Creative />} />
