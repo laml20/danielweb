@@ -7,6 +7,7 @@ import RightSection from '../components/RightSection';
 import LeftSection from "../components/LeftSection";
 import Experience from "../components/Experience";
 import ProjectsCarousel from '../components/ProjectsCarousel';
+import AboutMe from '../components/AboutMe';
 
 const HomePage = () => {
   return (
@@ -38,7 +39,7 @@ const HomePage = () => {
 
         <ProjectsCarousel></ProjectsCarousel>
 
-        <RightSection 
+        <AboutMe 
           title="About Me"
           text="I'm daniel, and i'm from california yeehaw"
           buttonText="read more"

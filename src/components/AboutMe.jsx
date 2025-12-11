@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // This is a section with text on the right and an image on the left
-export default function RightSection({
+export default function AboutMe({
     heading = null,
     title = "Title",
     text = "Lorem ipsum random text",
@@ -13,20 +13,20 @@ export default function RightSection({
     return (
       <>
         <style>{`
-          .rightsection {
+          .abtmesection {
             display: grid;
-            grid-template-columns: 40% 70%;
+            grid-template-columns: 50% 50%;
             margin: 2% 15%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
           }
   
-          .rightsection div {
+          .abtmesection div {
             margin: 0;
           }
   
-          .righttextpart {
+          .abtmetextpart {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -35,35 +35,35 @@ export default function RightSection({
             padding: 0;
           }
 
-          .righttextpart button {
+          .abtmetextpart button {
             width: auto;     
             align-self: flex-start; 
           }
   
-          .rightimgpart {
+          .abtmeimgpart {
             display: flex;
             justify-content: flex-end;
             align-items: center;
           }
   
-          .rightimgpart img {
+          .abtmeimgpart img {
             max-height: 350px;
-            padding: 0% 15% 0% 0%;
+            padding: 0% 25% 0% 0%;
           }
         `}</style>
   
         <div
-          className="rightsection"
+          className="abtmesection"
           style={
             backgroundImage
               ? { backgroundImage: `url(${backgroundImage})` }
               : {}
           }
         >
-                  <div className="rightimgpart">
+                  <div className="abtmeimgpart">
             <img src={imageSrc} alt="section visual" />
           </div>
-          <div className="righttextpart">
+          <div className="abtmetextpart">
             <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
             <p>{text}</p>
             {buttonText && (
