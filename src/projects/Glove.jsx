@@ -15,21 +15,38 @@ return (
 
         <LeftSection
             title="Problem Definition & Impact"
-            text="Many individuals with limited fine motor control struggle with basic writing tasks, which impacts their ability to maintain independence, complete physical therapy exercises, and express themselves through personal journals. Existing handwriting assists on the market often feature outdated designs that are bulky, conspicuous, and fail to meet user needs for discretion and functionality. Our challenge was to create a device that would:
-
-Enable independent writing without assistance from caregivers
-Maintain user dignity through inconspicuous design
-Support physical therapy and motor skill recovery
-Provide reliable functionality across various writing scenarios
-
-The broader impact of this work extends beyond our client to thousands of individuals who experience reduced hand mobility from conditions including arthritis, stroke recovery, Parkinson's disease, and traumatic injuries."
+            text={
+                <>
+                    <p>Many individuals with limited fine motor control struggle with basic writing tasks, which impacts their ability to maintain independence, complete physical therapy exercises, and express themselves through personal journals. Our challenge was to create a device that would:</p>
+                    
+                    <ul>
+                        <li><strong>Enable independent writing</strong> without assistance from caregivers</li>
+                        <li><strong>Maintain user dignity</strong> through inconspicuous design</li>
+                        <li><strong>Support physical therapy</strong> and motor skill recovery</li>
+                        <li><strong>Provide reliable functionality</strong> across various writing scenarios</li>
+                    </ul>
+                    
+                    <p>The broader impact of this work extends beyond our client to thousands of individuals who experience reduced hand mobility from conditions including <strong>arthritis</strong>, <strong>stroke recovery</strong>, <strong>Parkinson's disease</strong>, and <strong>traumatic injuries</strong>.</p>
+                </>
+            }
             imageSrc={Daniel}
         />
 
         <RightSection
             title="Design Process & Methodology"
-            text="Requirements Analysis
-Through extensive client interviews and literature review, we established comprehensive design criteria divided into constraints and objectives. Our requirements encompassed both quantifiable metrics (weight, dimensions, force tolerances) and user-defined scales for attributes like reproducibility and ease of use."
+            text={<>
+                <strong>Requirements Analysis</strong>
+                
+                <p>Through extensive client interviews and literature review, we established comprehensive design criteria divided into constraints and objectives. Our requirements encompassed both quantifiable metrics (weight, dimensions, force tolerances) and user-defined scales for attributes like reproducibility and ease of use.</p>
+
+                <p>We employed a pairwise comparison chart methodology to rank objectives by importance, ensuring our design priorities aligned with actual user needs rather than assumed requirements. This systematic approach revealed that comfort, stability, and ease of donning/doffing ranked as the highest-priority objectives.                </p>
+        
+                <strong>Ideation & Concept Generation                </strong>
+                
+                <p>Our ideation process utilized the slip-note brainstorming method, generating 36 initial concepts across six categories: accessories, wrist supports, few-finger designs, mechanical hands, glove-like designs, and tightening devices. We then systematically categorized ideas as complete or partial concepts, allowing for strategic mix-and-match combinations through morphological analysis.                </p>
+                
+                <p>This structured creativity approach yielded 48 viable complete design concepts, which we methodically screened against our design criteria. The screening process reduced our concept pool to five finalist designs, which underwent rigorous evaluation through a weighted scoring matrix.                </p>
+            </>}
             imageSrc={Daniel}
         />
     </div>
