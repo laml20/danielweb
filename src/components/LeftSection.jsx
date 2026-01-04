@@ -15,12 +15,14 @@ export default function LeftSection({
         <style>{`
           .leftsection {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             margin: 3% 5%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            max-height: 450px;
+            max-height: none;
+            align-items: center;
           }
   
           .lefttextpart {
@@ -28,8 +30,8 @@ export default function LeftSection({
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            width: 90%;
-            padding: 0 0 0 15%;
+            width: 100%;
+            padding: 0 0 0 10%;
           }
 
           .lefttextpart button {
@@ -41,12 +43,62 @@ export default function LeftSection({
             display: flex;
             justify-content: flex-end;
             align-items: center;
+            padding: 0 10% 0 0;
           }
   
           .leftimgpart img {
+            max-width: 100%;
+            height: auto;
             max-height: 500px;
-            height: 87%;
-            padding: 10% 17% 0;
+            object-fit: contain;
+          }
+
+          /* Tablet styles */
+          @media (max-width: 992px) {
+            .leftsection {
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+              margin: 5% 5%;
+            }
+
+            .lefttextpart {
+              padding: 0 5%;
+              text-align: center;
+            }
+
+            .lefttextpart button {
+              align-self: center;
+            }
+
+            .leftimgpart {
+              justify-content: center;
+              padding: 0;
+              order: -1; /* Move image above text on mobile */
+            }
+
+            .leftimgpart img {
+              max-height: 350px;
+            }
+          }
+
+          /* Mobile styles */
+          @media (max-width: 576px) {
+            .leftsection {
+              margin: 5% 2%;
+              gap: 1rem;
+            }
+
+            .lefttextpart {
+              padding: 0 2%;
+            }
+
+            .lefttextpart p:first-of-type {
+              font-size: calc(1.2rem + .4vw) !important;
+            }
+
+            .leftimgpart img {
+              max-height: 250px;
+            }
           }
         `}</style>
   
