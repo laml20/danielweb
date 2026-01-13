@@ -15,15 +15,13 @@ export default function AboutMe({
         <style>{`
           .abtmesection {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             margin: 2% 15%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-          }
-  
-          .abtmesection div {
-            margin: 0;
+            align-items: center;
           }
   
           .abtmetextpart {
@@ -31,7 +29,7 @@ export default function AboutMe({
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            width: 90%;
+            width: 100%;
             padding: 0;
           }
 
@@ -42,13 +40,59 @@ export default function AboutMe({
   
           .abtmeimgpart {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
+            padding-right: 15%;
           }
   
           .abtmeimgpart img {
+            max-width: 100%;
+            height: auto;
             max-height: 350px;
-            padding: 0% 25% 0% 0%;
+            object-fit: contain;
+          }
+
+          /* Tablet styles */
+          @media (max-width: 992px) {
+            .abtmesection {
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+              margin: 5% 5%;
+            }
+
+            .abtmetextpart {
+              text-align: center;
+            }
+
+            .abtmetextpart button {
+              align-self: center;
+            }
+
+            .abtmeimgpart {
+              justify-content: center;
+              padding: 0;
+              order: -1; /* Move image above text on mobile */
+            }
+
+            .abtmeimgpart img {
+              max-height: 300px;
+            }
+          }
+
+          /* Mobile styles */
+          @media (max-width: 576px) {
+            .abtmesection {
+              margin: 5% 2%;
+              gap: 1rem;
+            }
+
+            .abtmetextpart p:first-of-type {
+              font-size: calc(1.2rem + .4vw) !important;
+            }
+
+            .abtmeimgpart img {
+              max-height: 250px;
+            }
           }
         `}</style>
   
@@ -60,7 +104,7 @@ export default function AboutMe({
               : {}
           }
         >
-                  <div className="abtmeimgpart">
+          <div className="abtmeimgpart">
             <img src={imageSrc} alt="section visual" />
           </div>
           <div className="abtmetextpart">
@@ -80,4 +124,3 @@ export default function AboutMe({
       </>
     );
   }
-  

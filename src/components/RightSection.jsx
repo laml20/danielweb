@@ -15,15 +15,13 @@ export default function RightSection({
         <style>{`
           .rightsection {
             display: grid;
-            grid-template-columns: 40% 70%;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
             margin: 2% 15%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-          }
-  
-          .rightsection div {
-            margin: 0;
+            align-items: center;
           }
   
           .righttextpart {
@@ -31,7 +29,7 @@ export default function RightSection({
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            width: 90%;
+            width: 100%;
             padding: 0;
           }
 
@@ -42,13 +40,59 @@ export default function RightSection({
   
           .rightimgpart {
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
+            padding-right: 10%;
           }
   
           .rightimgpart img {
+            max-width: 100%;
+            height: auto;
             max-height: 350px;
-            padding: 0% 15% 0% 0%;
+            object-fit: contain;
+          }
+
+          /* Tablet styles */
+          @media (max-width: 992px) {
+            .rightsection {
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+              margin: 5% 5%;
+            }
+
+            .righttextpart {
+              text-align: center;
+            }
+
+            .righttextpart button {
+              align-self: center;
+            }
+
+            .rightimgpart {
+              justify-content: center;
+              padding: 0;
+              order: -1; /* Move image above text on mobile */
+            }
+
+            .rightimgpart img {
+              max-height: 300px;
+            }
+          }
+
+          /* Mobile styles */
+          @media (max-width: 576px) {
+            .rightsection {
+              margin: 5% 2%;
+              gap: 1rem;
+            }
+
+            .righttextpart p:first-of-type {
+              font-size: calc(1.2rem + .4vw) !important;
+            }
+
+            .rightimgpart img {
+              max-height: 250px;
+            }
           }
         `}</style>
   
@@ -60,7 +104,7 @@ export default function RightSection({
               : {}
           }
         >
-                  <div className="rightimgpart">
+          <div className="rightimgpart">
             <img src={imageSrc} alt="section visual" />
           </div>
           <div className="righttextpart">
@@ -80,4 +124,3 @@ export default function RightSection({
       </>
     );
   }
-  
