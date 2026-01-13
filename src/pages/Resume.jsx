@@ -7,12 +7,12 @@ export default function Resume() {
   const tabs = {
     cv: {
       title: 'Curriculum Vitae',
-      path: '/danielweb/src/media/cv/Daniel_Plascencia_CV.pdf',
+      path: '/src/media/cv/Daniel_Plascencia_CV.pdf',
       filename: 'Daniel_Plascencia_CV.pdf'
     },
     certificates: {
       title: 'Certificates',
-      path: '/danielweb/src/media/cv/Certificates.pdf',
+      path: '/src/media/cv/Certificates.pdf',
       filename: 'Daniel_Plascencia_Certificates.pdf'
     }
   };

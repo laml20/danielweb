@@ -17,7 +17,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router basename="/danielweb">
+    <Router basename="/">
       <div
         className="app"
         style={{
