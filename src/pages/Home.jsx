@@ -46,17 +46,19 @@ const HomePage = () => {
         }
       `}</style>
 
+      <p style={{textAlign: "center"}}><b>Note: This site is a work in progress.</b></p>
+        
       <Container className="home-container">
         <LeftSection
-          title="HELLO!"
-          text="I'm Daniel and I'm super passionate about mechanical engineering and stuff"
+          title="Hello!"
+          text="Welcome to my personal website. If you'd like to learn more about who I am and what I'm about, you've come to the right place. I consider this my digital notebook, it is a journal filled with content throughout my years in academia and I plan to continually update it. In here you'll find my qualifications, previous engineering projects, and creative pursuits. So, be my guest and explore!"
           buttonText="Projects"
           buttonLink="/projects"
           imageSrc={Daniel}
           backgroundImage={Rice}
         />
 
-        <Experience />
+        
 
         <section className="video-section">
           <div className="video-wrapper">
@@ -76,7 +78,7 @@ const HomePage = () => {
 
         <AboutMe 
           title="About Me"
-          text="I'm daniel, and i'm from california yeehaw"
+          text="I'm Daniel, a mechanical engineer who's interested in design-driven research at the intersection of haptics, rehabilitation, and robotics."
           buttonText="read more"
           buttonLink="/about"
           imageSrc={Family}
