@@ -6,29 +6,29 @@ export default function CurriculumVitae() {
   
   const cvData = {
     title: 'Curriculum Vitae',
-    path: '/src/media/documents/DanielPlascenciaCV.pdf',
+    path: '/documents/DanielPlascenciaCV.pdf',
     filename: 'DanielPlascenciaCV.pdf'
   };
   
   const certificates = [
     {
       title: 'EIT Certificate',
-      path: '/src/media/documents/CV_Certificates_EIT.pdf',
+      path: '/documents/CV_Certificates_EIT.pdf',
       filename: 'CV_Certificates_EIT.pdf'
     },
     {
       title: 'CITI Certificate',
-      path: '/src/media/documents/CV_Certificates_CITI.pdf',
+      path: '/documents/CV_Certificates_CITI.pdf',
       filename: 'CV_Certificates_CITI.pdf'
     },
     {
       title: 'CSWA Certificate',
-      path: '/src/media/documents/CV_Certificates_CSWA.pdf',
+      path: '/documents/CV_Certificates_CSWA.pdf',
       filename: 'CV_Certificates_CSWA.pdf'
     },
     {
       title: 'Order of the Engineer Certificate',
-      path: '/src/media/documents/CV_Certificates_OrderoftheEngineer.pdf',
+      path: '/documents/CV_Certificates_OrderoftheEngineer.pdf',
       filename: 'CV_Certificates_OrderoftheEngineer.pdf'
     }
   ];
