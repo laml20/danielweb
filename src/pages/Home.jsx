@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import Daniel from "../media/home/daniel.png";
-import Rice from "../media/home/rice.png";
+import Rice from "../media/home/Rice.png";
 import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
 import LeftSection from "../components/LeftSection";
