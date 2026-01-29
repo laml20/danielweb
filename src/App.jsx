@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Resume from "./pages/Resume";
+import CurriculumVitae from "./pages/CurriculumVitae";
 import Projects from "./pages/Projects";
 import Creative from "./pages/Creative";
 import About from "./pages/About";
@@ -32,7 +32,7 @@ function App() {
         <main className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cv" element={<Resume />} />
+            <Route path="/cv" element={<CurriculumVitae />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
             <Route path="/projects/automated-capsule-vending-machine" element={<Vending />} />
