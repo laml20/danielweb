@@ -2,6 +2,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Add this import
 import { useState } from 'react';
 import Daniel from "../media/home/daniel.png";
+import HandwriteAssist from "../media/projects/HandwriteAssist.png";
+import VendingMachine from "../media/projects/VendingMachine.png";
 
 const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -11,38 +13,73 @@ const Projects = () => {
       {
         id: 1,
         image: Daniel,
-        title: 'Autonomous Sailboat',
-        description: 'So basically the main idea of this is we want to be able to design two fully',
-        link: '/projects/autonomous-sailboat-fleet' // Remove basePath, just use the route
+        title: 'Senior Design: Autonomous Sailboat Fleet',
+        description: 'Two sailboats that communicate and self-navigate to a given endpoint while carrying cargo',
+        link: '/projects/autonomous-sailboat-fleet'
       },
       {
         id: 2,
-        image: Daniel,
-        title: 'vending',
-        description: 'Project description goes here',
+        image: VendingMachine,
+        title: 'Automated Capsule Vending Machine',
+        description: 'A functioning vending machine built for class, a project focused on learning the basics of electronics',
         link: '/projects/automated-capsule-vending-machine'
       },
       {
         id: 3,
         image: Daniel,
-        title: 'glove',
-        description: 'Project description goes here',
-        link: '/projects/vibrational-glove-for=parkinsons-disease'
+        title: 'Parkinsons Vibrational Glove',
+        description: 'A wearable glove based on Stanford research which delivers vibrations to calm tremors',
+        link: '/projects/vibrational-glove-for-parkinsons-disease'
       },
       {
           id: 4,
-          image: Daniel,
-          title: 'hand',
-          description: 'Project description goes here',
+          image: HandwriteAssist,
+          title: 'Handwriting Assistance Device',
+          description: 'A wearable device for people with limited mobility to enable independent writing',
           link: '/projects/handwriting-assistance-device'
         },
       {
           id: 5,
           image: Daniel,
-          title: 'foot',
-          description: 'Project description goes here',
+          title: 'Research: Team Foot',
+          description: 'A haptic device for transfemoral amputees which provides feedback to improve balance',
           link: '/projects/sensory-feedback-for-smart-prosthetics'
-      }
+      },
+      {
+          id: 6,
+          image: Daniel,
+          title: 'DC Motor',
+          description: 'A hands-on build of a functioning DC motor, focused on core prototyping and fabrication techniques',
+          link: '/projects/dc-motor'
+      },
+      {
+          id: 7,
+          image: Daniel,
+          title: 'REV Aeroshell',
+          description: 'Structural chassis for the Rice Electric Vehicle competition team, built for integrity and aerodynamic performance',
+          link: '/projects/rev-aeroshell'
+      },
+      {
+          id: 8,
+          image: Daniel,
+          title: 'RoboDuck - WIP',
+          description: 'A personal robot built from scratch — a self-driven project mainly to learn and explore robotics',
+          link: '/projects/robo-duck'
+      },    
+      {
+          id: 9,
+          image: Daniel,
+          title: 'Personal Work Booth',
+          description: 'A personal work station built from scratch — a self-driven project mainly to learn and explore woodworking',
+          link: '/projects/personal-work-booth'
+      }, 
+      {
+          id: 10,
+          image: Daniel,
+          title: 'ENGI 210: Prototyping & Fabrication',
+          description: 'A hands-on class covering 3D printing, fabrication methods, and other prototyping techniques',
+          link: '/projects/prototyping-fabrication'
+      }, 
     ];
 
   const handleMouseMove = (e) => {

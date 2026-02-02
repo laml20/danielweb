@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import Daniel from "../media/home/daniel.png";
-import Rice from "../media/home/Rice.png";
+import Rice from "../media/home/Rice5.png";
 import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
 import LeftSection from "../components/LeftSection";
@@ -51,7 +51,7 @@ const HomePage = () => {
       <Container className="home-container">
         <LeftSection
           title="Hello!"
-          text="Welcome to my personal website. If you'd like to learn more about who I am and what I'm about, you've come to the right place. I consider this my digital notebook, it is a journal filled with content throughout my years in academia and I plan to continually update it. In here you'll find my qualifications, previous engineering projects, and creative pursuits. So, be my guest and explore!"
+          text="I'm Daniel, a mechanical engineer exploring design-driven research at the intersection of haptics, rehabilitation, and robotics. Welcome to my digital notebook, where I keep a growing collection of engineering projects, academic work, and creative pursuits."
           buttonText="Projects"
           buttonLink="/projects"
           imageSrc={Daniel}
