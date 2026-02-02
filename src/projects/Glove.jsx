@@ -1,12 +1,15 @@
 import React from "react";
-import Daniel from "../media/home/daniel.png";
 import RightSection from "../components/RightSection";
-import Header from "../components/Header";
-import LeftSection from "../components/LeftSection";
+import Daniel from "../media/home/daniel.png";
 
 export default function Glove() {
 return (
-    <LeftSection/>
-        
+<div>
+    <RightSection
+    title="Parkinsons Vibrational Glove"
+    subtitle="A wearable glove based on Stanford research which delivers vibrations to calm tremors"
+    imageSrc={Daniel}
+    />
+</div>
 );
 }

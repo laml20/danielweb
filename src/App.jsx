@@ -6,11 +6,18 @@ import Creative from "./pages/Creative";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+// Project imports
 import Sailboat from "./projects/Sailboat";
 import Vending from "./projects/Vending";
 import Foot from "./projects/Foot";
 import Glove from "./projects/Glove";
 import HandAssist from "./projects/HandAssist";
+import Roboduck from "./projects/Roboduck";
+import Prototyping from "./projects/Prototyping";
+import DCMotor from "./projects/DCMotor";
+import REV from "./projects/REV";
+import Workbooth from "./projects/Workbooth";
+// Style imports
 import bkgd from "./media/home/background.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -39,6 +46,11 @@ function App() {
             <Route path="/projects/vibrational-glove-for-parkinsons-disease" element={<Glove />} />
             <Route path="/projects/handwriting-assistance-device" element={<HandAssist />} />
             <Route path="/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
+            <Route path="/projects/robo-duck" element={<Roboduck />} />
+            <Route path="/projects/prototyping-fabrication" element={<Prototyping />} />
+            <Route path="/projects/dc-motor" element={<DCMotor />} />
+            <Route path="/projects/rev-aeroshell" element={<REV />} />
+            <Route path="/projects/personal-work-booth" element={<Workbooth />} />
             <Route path="/creative" element={<Creative />} />
             <Route path="/about" element={<About />} />
           </Routes>
