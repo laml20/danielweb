@@ -4,7 +4,7 @@ import Daniel from "../media/home/daniel.png";
 import Rice from "../media/home/Rice5.png";
 import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
-import LeftSection from "../components/LeftSection";
+import Intro from "../components/Intro";
 import Experience from "../components/Experience";
 import ProjectsCarousel from '../components/ProjectsCarousel';
 import AboutMe from '../components/AboutMe';
@@ -49,7 +49,7 @@ const HomePage = () => {
       <p style={{textAlign: "center"}}><b>Note: This site is a work in progress.</b></p>
         
       <Container className="home-container">
-        <LeftSection
+        <Intro
           title="Hello!"
           text="I'm Daniel, a mechanical engineer exploring design-driven research at the intersection of haptics, rehabilitation, and robotics. Welcome to my digital notebook, where I keep a growing collection of engineering projects, academic work, and creative pursuits."
           buttonText="Projects"
