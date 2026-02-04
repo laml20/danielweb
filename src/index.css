@@ -36,7 +36,6 @@ body {
   display: inherit;
   min-width: 320px;
   min-height: 100vh;
-
 }
 
 h1 {
@@ -56,7 +55,7 @@ button {
 }
 
 button:hover {
-  border-color: #ca40bd;
+  border-color: #a51b09;
 }
 button:focus,
 button:focus-visible {

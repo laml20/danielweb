@@ -49,14 +49,8 @@ const HomePage = () => {
       <p style={{textAlign: "center"}}><b>Note: This site is a work in progress.</b></p>
         
       <Container className="home-container">
-        <Intro
-          title="Hello!"
-          text="I'm Daniel, a mechanical engineer exploring design-driven research at the intersection of haptics, rehabilitation, and robotics. Welcome to my digital notebook, where I keep a growing collection of engineering projects, academic work, and creative pursuits."
-          buttonText="Projects"
-          buttonLink="/projects"
-          imageSrc={Daniel}
-          backgroundImage={Rice}
-        />
+        <Intro/>
+        <Experience />
 
         
 
@@ -79,7 +73,7 @@ const HomePage = () => {
         <AboutMe 
           title="About Me"
           text="I'm Daniel, a mechanical engineer who's interested in design-driven research at the intersection of haptics, rehabilitation, and robotics."
-          buttonText="read more"
+          buttonText="Read more"
           buttonLink="/about"
           imageSrc={Family}
         />
