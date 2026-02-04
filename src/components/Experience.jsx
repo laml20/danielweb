@@ -70,27 +70,25 @@ export default function Experience() {
           <h3 className="experience-title">My Experience</h3>
           <button
             onClick={() =>
-              openPdfModal("src/media/cv/Daniel_Plascencia_CV.pdf")
+              openPdfModal("../public/documents/DanielPlascenciaCV.pdf")
             }
           >
             Curriculum Vitae
           </button>
           <button
-            onClick={() => openPdfModal("src/media/cv/Resume.pdf")}
+            onClick={() => openPdfModal("../public/documents/CV_Certificates_EIT.pdf")}
           >
-            Resume
+            Certificates
           </button>
         </div>
 
         {/* Modal */}
         <Modal show={showModal} onHide={closeModal} size="lg" centered>
           <Modal.Header closeButton>
-            <Modal.Title>PDF Viewer</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <iframe
               src={pdfSrc}
-              title="PDF Viewer"
               style={{ width: "100%", height: "500px", border: "none" }}
             ></iframe>
           </Modal.Body>

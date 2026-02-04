@@ -63,7 +63,7 @@ export default function CurriculumVitae() {
                 color: activeTab === 'cv' ? '#213547' : '#6c757d',
                 fontWeight: activeTab === 'cv' ? 'bold' : 'normal',
                 paddingBottom: '0.5rem',
-                borderBottom: activeTab === 'cv' ? '3px solid #923326' : '3px solid transparent',
+                borderBottom: activeTab === 'cv' ? '3px solid #881b0d' : '3px solid transparent',
                 transition: 'all 0.3s ease'
               }}
             >
@@ -78,7 +78,7 @@ export default function CurriculumVitae() {
                 color: activeTab === 'certificates' ? '#213547' : '#6c757d',
                 fontWeight: activeTab === 'certificates' ? 'bold' : 'normal',
                 paddingBottom: '0.5rem',
-                borderBottom: activeTab === 'certificates' ? '3px solid #923326' : '3px solid transparent',
+                borderBottom: activeTab === 'certificates' ? '3px solid #881b0d' : '3px solid transparent',
                 transition: 'all 0.3s ease'
               }}
             >
@@ -95,8 +95,8 @@ export default function CurriculumVitae() {
               link.click();
             }}
             onMouseEnter={(e) => {
-              e.target.style.borderColor = '#923326';
-              e.target.style.color = '#923326';
+              e.target.style.borderColor = '#881b0d';
+              e.target.style.color = '#881b0d';
             }}
             onMouseLeave={(e) => {
               e.target.style.borderColor = 'black';
