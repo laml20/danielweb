@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Daniel from "../media/home/daniel.png";
+import Daniel from "../media/home/Daniel1.png";
 import Rice from "../media/home/Rice5.png";
 import Family from "../media/home/fam.png";
 import RightSection from '../components/RightSection';
@@ -30,18 +30,14 @@ const HomePage = () => {
         /* Tablet styles */
         @media (max-width: 992px) {
           .video-wrapper {
-            width: 80%;
+            width: 90%;
           }
         }
 
         /* Mobile styles */
         @media (max-width: 576px) {
-          .video-section {
-            padding: 2rem 0;
-          }
-
           .video-wrapper {
-            width: 95%;
+            width: 80%;
           }
         }
       `}</style>
@@ -73,7 +69,7 @@ const HomePage = () => {
         <AboutMe 
           title="About Me"
           text="I'm Daniel, a mechanical engineer who's interested in design-driven research at the intersection of haptics, rehabilitation, and robotics."
-          buttonText="Read more"
+          buttonText="Read More"
           buttonLink="/about"
           imageSrc={Family}
         />
