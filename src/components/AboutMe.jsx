@@ -17,7 +17,7 @@ export default function AboutMe({
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            margin: 2% 15%;
+            margin: 10% 15% 5%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -57,7 +57,7 @@ export default function AboutMe({
             .abtmesection {
               grid-template-columns: 1fr;
               gap: 1.5rem;
-              margin: 5% 5%;
+              margin: 10% 15% 5%;
             }
 
             .abtmetextpart {
@@ -76,13 +76,14 @@ export default function AboutMe({
 
             .abtmeimgpart img {
               max-height: 300px;
+              margin: 7% 0 5%;
             }
           }
 
           /* Mobile styles */
           @media (max-width: 576px) {
             .abtmesection {
-              margin: 5% 2%;
+              margin: 17% 15% 5%;
               gap: 1rem;
             }
 
@@ -92,6 +93,7 @@ export default function AboutMe({
 
             .abtmeimgpart img {
               max-height: 250px;
+              margin: 0 0 5%;
             }
           }
         `}</style>

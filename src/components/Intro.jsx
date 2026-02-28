@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Daniel from "../media/home/daniel.png";
+import Daniel from "../media/home/Daniel2.png";
 import Rice from "../media/home/Rice5.png";
 
 //  Version 3: White Highlight - This is a section with text on the left and an image on the right
@@ -21,7 +21,7 @@ return (
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 0 0 10%;
+            padding: 10% 0 0 10%;
           }
           .introtextpart p {
             margin: 0.5rem 0;
@@ -64,6 +64,7 @@ return (
             justify-content: flex-end;
             align-items: center;
             padding: 0 10% 0 0;
+            margin: 25px 0px -50px 0px;
           }
           .introimgpart img {
             max-width: 100%;
