@@ -34,9 +34,9 @@ const Projects = () => {
       {
           id: 4,
           image: HandwriteAssist,
-          title: 'Handwriting Assistance Device',
-          description: 'A wearable device for people with limited mobility to enable independent writing',
-          link: '/projects/handwriting-assistance-device'
+          title: 'Handwriting Assistive Device',
+          description: 'A wearable device for people with limited hand dexterity to enable independent writing',
+          link: '/projects/handwriting-assistive-device'
         },
       {
           id: 5,
