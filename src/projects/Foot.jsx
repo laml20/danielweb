@@ -1,13 +1,12 @@
-import React from "react";
-import RightSection from "../components/RightSection";
 import Daniel from "../media/home/daniel.png";
+import ProjectDescription from "../components/ProjectDescription";
 
 export default function Foot() {
 return (
 <div>
-    <RightSection
+    <ProjectDescription
     title="Research: Team Foot"
-    subtitle="A haptic device for transfemoral amputees which provides feedback to improve balance"
+    text="A haptic device for transfemoral amputees which provides feedback to improve balance"
     imageSrc={Daniel}
     />
 </div>

@@ -6,6 +6,7 @@ import CurriculumVitae from "./pages/CurriculumVitae";
 import Projects from "./pages/Projects";
 import Creative from "./pages/Creative";
 import About from "./pages/About";
+import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -25,7 +26,6 @@ import Workbooth from "./projects/Workbooth";
 import bkgd from "./media/home/background.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -41,6 +41,7 @@ function App() {
           // minHeight: "100vh",
         }}
       >
+        <ScrollToTop />
         <Header />
         <main>
           <Routes>
@@ -50,7 +51,7 @@ function App() {
             <Route path="/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
             <Route path="/projects/automated-capsule-vending-machine" element={<Vending />} />
             <Route path="/projects/vibrational-glove-for-parkinsons-disease" element={<Glove />} />
-            <Route path="/projects/handwriting-assistance-device" element={<HandAssist />} />
+            <Route path="/projects/handwriting-assistive-device" element={<HandAssist />} />
             <Route path="/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
             <Route path="/projects/robo-duck" element={<Roboduck />} />
             <Route path="/projects/prototyping-fabrication" element={<Prototyping />} />

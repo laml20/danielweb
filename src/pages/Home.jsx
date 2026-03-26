@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import Daniel from "../media/home/Daniel1.png";
 import Rice from "../media/home/Rice5.png";
 import Family from "../media/home/fam.png";
-import RightSection from '../components/RightSection';
 import Intro from "../components/Intro";
 import Experience from "../components/Experience";
 import ProjectsCarousel from '../components/ProjectsCarousel';

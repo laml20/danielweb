@@ -1,13 +1,12 @@
-import React from "react";
-import RightSection from "../components/RightSection";
 import Daniel from "../media/home/daniel.png";
+import ProjectDescription from "../components/ProjectDescription";
 
 export default function Sailboat() {
 return (
 <div>
-    <RightSection
+    <ProjectDescription
     title="Sailboat"
-    subtitle="An Autonomous Sailboat for Ocean Exploration"
+    text="An Autonomous Sailboat for Ocean Exploration"
     imageSrc={Daniel}
     />
 </div>

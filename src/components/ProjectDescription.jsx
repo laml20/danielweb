@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-// This is a section with text on the right and an image on the left
-export default function RightSection({
-    heading = null,
+// Hero/intro block at the top of each project page — image left, text right
+export default function ProjectDescription({
     title = "Title",
     text = "Lorem ipsum random text",
     buttonText = null,
@@ -13,7 +12,7 @@ export default function RightSection({
     return (
       <>
         <style>{`
-          .rightsection {
+          .proj-desc {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 2rem;
@@ -23,8 +22,8 @@ export default function RightSection({
             background-repeat: no-repeat;
             align-items: center;
           }
-  
-          .righttextpart {
+
+          .proj-desc-textpart {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,88 +32,80 @@ export default function RightSection({
             padding: 0;
           }
 
-          .righttextpart button {
-            width: auto;     
-            align-self: flex-start; 
+          .proj-desc-textpart button {
+            width: auto;
+            align-self: flex-start;
           }
-  
-          .rightimgpart {
+
+          .proj-desc-imgpart {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             padding-right: 10%;
           }
-  
-          .rightimgpart img {
+
+          .proj-desc-imgpart img {
             max-width: 100%;
             height: auto;
             max-height: 350px;
             object-fit: contain;
           }
 
-          /* Tablet styles */
           @media (max-width: 992px) {
-            .rightsection {
+            .proj-desc {
               grid-template-columns: 1fr;
               gap: 1.5rem;
               margin: 5% 5%;
             }
 
-            .righttextpart {
+            .proj-desc-textpart {
               text-align: center;
             }
 
-            .righttextpart button {
+            .proj-desc-textpart button {
               align-self: center;
             }
 
-            .rightimgpart {
+            .proj-desc-imgpart {
               justify-content: center;
               padding: 0;
-              order: -1; /* Move image above text on mobile */
+              order: -1;
             }
 
-            .rightimgpart img {
+            .proj-desc-imgpart img {
               max-height: 300px;
             }
           }
 
-          /* Mobile styles */
           @media (max-width: 576px) {
-            .rightsection {
+            .proj-desc {
               margin: 5% 2%;
               gap: 1rem;
             }
 
-            .righttextpart p:first-of-type {
+            .proj-desc-textpart p:first-of-type {
               font-size: calc(1.2rem + .4vw) !important;
             }
 
-            .rightimgpart img {
+            .proj-desc-imgpart img {
               max-height: 250px;
             }
           }
         `}</style>
-  
+
         <div
-          className="rightsection"
-          style={
-            backgroundImage
-              ? { backgroundImage: `url(${backgroundImage})` }
-              : {}
-          }
+          className="proj-desc"
+          style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {}}
         >
-          <div className="rightimgpart">
-            <img src={imageSrc} alt="section visual" />
+          <div className="proj-desc-imgpart">
+            <img src={imageSrc} alt="project visual" />
           </div>
-          <div className="righttextpart">
+          <div className="proj-desc-textpart">
             <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
             <p>{text}</p>
             {buttonText && (
               buttonLink ? (
-                <Link to={buttonLink}>
-                  <button>{buttonText}</button>
-                </Link>
+                <Link to={buttonLink}><button>{buttonText}</button></Link>
               ) : (
                 <button>{buttonText}</button>
               )
