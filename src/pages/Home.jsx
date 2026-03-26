@@ -8,15 +8,12 @@ import Intro from "../components/Intro";
 import Experience from "../components/Experience";
 import ProjectsCarousel from '../components/ProjectsCarousel';
 import AboutMe from '../components/AboutMe';
+import "../App.css";
 
 const HomePage = () => {
   return (
     <>
       <style>{`
-        .home-container {
-          padding: 0;
-        }
-
         .video-section {
           display: flex;
           justify-content: center;
@@ -44,7 +41,7 @@ const HomePage = () => {
 
       <p style={{textAlign: "center"}}><b>Note: This site is a work in progress.</b></p>
         
-      <Container className="home-container">
+      <div className="container">
         <Intro/>
         <Experience />
 
@@ -65,15 +62,8 @@ const HomePage = () => {
         </section>
 
         <ProjectsCarousel />
-
-        <AboutMe 
-          title="About Me"
-          text="I'm Daniel, a mechanical engineer who's interested in design-driven research at the intersection of haptics, rehabilitation, and robotics."
-          buttonText="Read More"
-          buttonLink="/about"
-          imageSrc={Family}
-        />
-      </Container>
+        <AboutMe/>
+      </div>
     </>
   );
 };

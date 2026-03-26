@@ -10,16 +10,8 @@ const responsiveStyles = `
     border-color: #a51b09;
   }
 
-  @media (max-width: 1024px) {
-    .projects-carousel {
-      max-width: 92% !important;
-    }
-    .projects-carousel .slide-container {
-      max-height: 450px;
-    }
-  }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .projects-carousel {
       max-width: 100vw !important;
       margin-left: calc(-50vw + 50%) !important;
@@ -35,7 +27,7 @@ const responsiveStyles = `
 
 const styles = {
   carouselWrapper: {
-    maxWidth: '80%',
+    maxWidth: '90%',
     margin: '6% auto',
   },
   slideContainer: {
