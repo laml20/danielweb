@@ -1,0 +1,18 @@
+:root {
+    /* Breakpoints */
+    --bp-tablet: 992px;
+    --bp-mobile: 576px;
+  
+    /* Typography */
+    /* --font-title: calc(1.3rem + 0.6vw);
+    --font-body: 1rem;
+    --font-small: 0.875rem; */
+  
+    /* Colors */
+    --color-hover: #a51b09;
+  
+    /* Spacing */
+    /* --padding-section: 3rem 0;   /* you already have this in Home.jsx */
+    /* --padding-page: 0; */
+
+}

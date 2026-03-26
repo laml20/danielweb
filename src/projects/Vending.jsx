@@ -1,13 +1,12 @@
-import React from "react";
-import RightSection from "../components/RightSection";
 import Daniel from "../media/home/daniel.png";
+import ProjectDescription from "../components/ProjectDescription";
 
 export default function Vending() {
 return (
 <div>
-    <RightSection
+    <ProjectDescription
     title="Automated Capsule Vending Machine"
-    subtitle="A functioning vending machine built for class, a project focused on learning the basics of electronics"
+    text="A functioning vending machine built for class, a project focused on learning the basics of electronics"
     imageSrc={Daniel}
     />
 </div>

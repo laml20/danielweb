@@ -7,12 +7,6 @@
     align-items: center;
   }
   
-  .bio-image {
-    width: 90%;
-    max-width: 1200px;
-    margin: -20px 0 0 0;
-  }
-  
   .overlay-text {
     position: absolute;
     left: 19%;
