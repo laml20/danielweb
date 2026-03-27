@@ -32,13 +32,18 @@ import Film25 from '../media/film/Plascencia_002-adj.jpg';
 import Film26 from '../media/film/Plascencia_003-adj.jpg';
 import Film27 from '../media/film/Plascencia_004-adj.jpg';
 
-
-
 // Digital Photography
 import LifeAndDeath1 from '../media/digital/Photography_life&death_1.jpg';
 import LifeAndDeath2 from '../media/digital/Photography_life&death_2.jpg';
 import Light1 from '../media/digital/Photography_light_1.jpg';
 import Light2 from '../media/digital/Photography_light_2.jpg';
+import Object1 from '../media/digital/Photography_object_1.jpg';
+import Object2 from '../media/digital/Photography_object_2.jpg';
+import Object3 from '../media/digital/Photography_object_3.jpg';
+import Scars1 from '../media/digital/Photography_scars_1.jpg';
+import Scars2 from '../media/digital/Photography_scars_2.jpg';
+import Scars3 from '../media/digital/Photography_scars_3.jpg';
+import Scars4 from '../media/digital/Photography_scars_4.jpg';
 
 // ─── Tab config ───────────────────────────────────────────────────────────────
 const tabs = [
@@ -90,7 +95,13 @@ const digitalData = [
   { id: 2, src: LifeAndDeath2, title: 'Life and Death 2', description: 'Another perspective on the theme of life and death.' },
   { id: 3, src: Light1, title: 'Light 1', description: 'A simple yet powerful image of light and shadow.' },
   { id: 4, src: Light2, title: 'Light 2', description: 'A different composition exploring the concept of light.' },
-
+  { id: 5, src: Object1, title: 'Object 1', description: 'A photograph focusing on the beauty of everyday objects.' },
+  { id: 7, src: Object3, title: 'Object 3', description: 'A creative composition highlighting the shapes of objects.' },
+  { id: 8, src: Scars1, title: 'Scars 1', description: 'An intimate photograph exploring the theme of scars and healing.' },
+  { id: 9, src: Scars2, title: 'Scars 2', description: 'A different perspective on scars and their stories.' },
+  { id: 10, src: Scars3, title: 'Scars 3', description: 'A close-up image focusing on the textures of scars.' },
+  { id: 11, src: Scars4, title: 'Scars 4', description: 'A final photograph in the scars series, capturing the resilience and beauty of healing.' },
+  { id: 6, src: Object2, title: 'Object 2', description: 'Another take on the theme of objects and their forms.' },
 ];
 
 // ─── ImageGrid ────────────────────────────────────────────────────────────────

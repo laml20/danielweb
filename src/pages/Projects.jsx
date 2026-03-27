@@ -100,12 +100,27 @@ const Projects = () => {
     setMousePosition({ x: 0, y: 0 });
   };
 
+  const chunkAlternating = (arr, pattern) => {
+    const rows = [];
+    let i = 0, p = 0;
+    while (i < arr.length) {
+      const size = pattern[p % pattern.length];
+      rows.push(arr.slice(i, i + size));
+      i += size;
+      p++;
+    }
+    return rows;
+  };
+
+  const projectRows = chunkAlternating(projects, [3, 2]);
+
   return(
-  <Container style={{padding: '3% 10%'}}>
+  <Container className="projects-container" style={{paddingTop: '3%', paddingBottom: '3%'}}>
       <h1>Projects</h1>
       <section className="projects-gallery py-5">
-        <Row className="g-3">
-          {projects.map((project) => (
+        {projectRows.map((row, rowIndex) => (
+        <Row key={rowIndex} className="g-3 mb-3 justify-content-center">
+          {row.map((project) => (
             <Col key={project.id} md={4}>
               <Link 
                 to={project.link}  // Change href to "to"
@@ -116,10 +131,9 @@ const Projects = () => {
                 <div 
                   className="card h-100" 
                   style={{
-                    backgroundColor: 'transparent', 
+                    backgroundColor: 'transparent',
                     border: '0px',
-                    cursor: 'pointer',
-                    overflow: 'hidden'
+                    cursor: 'pointer'
                   }}
                 >
                   <img 
@@ -127,11 +141,12 @@ const Projects = () => {
                     alt={project.title}
                     className="card-img-top"
                     onMouseMove={handleMouseMove}
-                    style={{ 
-                      height: '300px', 
-                      objectFit: 'cover',
-                      transform: hoveredCard === project.id 
-                        ? `perspective(1000px) rotateX(${mousePosition.x}deg) rotateY(${mousePosition.y}deg) scale(1.1)` 
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      transform: hoveredCard === project.id
+                        ? `perspective(1000px) rotateX(${mousePosition.x}deg) rotateY(${mousePosition.y}deg) scale(1.1)`
                         : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
                       transition: 'transform 0.1s ease-out'
                     }}
@@ -168,6 +183,7 @@ const Projects = () => {
             </Col>
           ))}
         </Row>
+        ))}
       </section>
   </Container>
   );
