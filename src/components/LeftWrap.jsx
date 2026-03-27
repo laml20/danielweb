@@ -2,7 +2,7 @@
 export default function LeftWrap({
     title = "Title",
     text = "Lorem ipsum random text",
-    imageSrc = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+    imageSrc,
     imageAlt = "section visual"
   }) {
     return (
@@ -53,7 +53,7 @@ export default function LeftWrap({
         `}</style>
 
         <div className="leftwrap-container">
-          <img src={imageSrc} alt={imageAlt} className="leftwrap-img" />
+          {imageSrc && <img src={imageSrc} alt={imageAlt} className="leftwrap-img" />}
           <p className="leftwrap-title">{title}</p>
           <div className="leftwrap-text">{text}</div>
         </div>

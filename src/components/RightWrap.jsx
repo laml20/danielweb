@@ -2,7 +2,7 @@
 export default function RightWrap({
     title = "Title",
     text = "Lorem ipsum random text",
-    imageSrc = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+    imageSrc,
     imageAlt = "section visual"
   }) {
     return (
@@ -53,7 +53,7 @@ export default function RightWrap({
         `}</style>
 
         <div className="rightwrap-container">
-          <img src={imageSrc} alt={imageAlt} className="rightwrap-img" />
+          {imageSrc && <img src={imageSrc} alt={imageAlt} className="rightwrap-img" />}
           <p className="rightwrap-title">{title}</p>
           <div className="rightwrap-text">{text}</div>
         </div>

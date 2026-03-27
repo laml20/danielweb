@@ -1,6 +1,6 @@
 
 /* projects page cards */
-.card { 
+.card {
   padding: 2em;
 }
 
@@ -8,4 +8,28 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+/* projects page: cap content width, center it, fixed side padding */
+.projects-container {
+  max-width: 1166px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* projects page: mobile — single column, smaller title, tighter gaps */
+@media (max-width: 576px) {
+  .projects-container .card {
+    padding: 0.5em;
+  }
+  .projects-container .projects-gallery {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  .projects-container .projects-gallery .row {
+    --bs-gutter-x: 0.35rem;
+    margin-bottom: 0.35rem !important;
+  }
 }
