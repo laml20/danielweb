@@ -52,7 +52,7 @@ export default function Footer() {
             <SiGmail size={20} />
           </a>
         </Stack>
-        <span style={{ color: "#6c757d" }}>Updated 16 Mar 26</span>
+        <span style={{ color: "#6c757d" }}>Updated 25 Mar 26</span>
       </Stack>
     </footer>
   );

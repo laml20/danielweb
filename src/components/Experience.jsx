@@ -20,7 +20,7 @@ export default function Experience() {
       <style>{`
         .experience-section {
           text-align: center;
-          padding: 1.5rem 0;
+          padding: 4rem 0 3.5rem;
         }
 
         .experience-content {
@@ -34,17 +34,6 @@ export default function Experience() {
         .experience-title {
           font-family: monospace;
           margin: 0;
-        }
-
-        /* Tablet styles */
-        @media (max-width: 768px) {
-          .experience-content {
-            gap: 1.5rem;
-          }
-
-          .experience-title {
-            font-size: 1.5rem;
-          }
         }
 
         /* Mobile styles */

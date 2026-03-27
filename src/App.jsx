@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Page imports
 import Home from "./pages/Home";
 import CurriculumVitae from "./pages/CurriculumVitae";
 import Projects from "./pages/Projects";
@@ -7,6 +9,7 @@ import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
 // Project imports
 import Sailboat from "./projects/Sailboat";
 import Vending from "./projects/Vending";
@@ -18,6 +21,7 @@ import Prototyping from "./projects/Prototyping";
 import DCMotor from "./projects/DCMotor";
 import REV from "./projects/REV";
 import Workbooth from "./projects/Workbooth";
+
 // Style imports
 import bkgd from "./media/home/background.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,20 +30,21 @@ import "./App.css";
 function App() {
   return (
     <Router basename="/">
+      <ScrollToTop />
       <div
-        className="app"
         style={{
           backgroundImage: `url(${bkgd})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
           minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <ScrollToTop />
         <Header />
-        <main className="content">
+        <main style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CurriculumVitae />} />
