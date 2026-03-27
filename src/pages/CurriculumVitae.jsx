@@ -34,10 +34,21 @@ export default function CurriculumVitae() {
   ];
 
   return (
-    <Container style={{ 
+    <Container style={{
       padding: '3rem 1rem',
       maxWidth: '1000px'
     }}>
+      <style>{`
+        .cv-download-btn::after {
+          content: ' ';
+          margin-left: 0;
+          transition: all 0.4s ease;
+        }
+        .cv-download-btn:hover::after {
+          content: ' ⤓';
+          margin-left: 0.5rem;
+        }
+      `}</style>
       <div>
         {/* Header with Tabs */}
         <div style={{
@@ -88,19 +99,12 @@ export default function CurriculumVitae() {
           
           {/* Download CV Button */}
           <button
+            className="cv-download-btn"
             onClick={() => {
               const link = document.createElement('a');
               link.href = cvData.path;
               link.download = cvData.filename;
               link.click();
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.borderColor = '#881b0d';
-              e.target.style.color = '#881b0d';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.borderColor = 'black';
-              e.target.style.color = 'black';
             }}
           >
             Download CV

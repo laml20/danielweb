@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import bkgd from '../media/home/background.png';
 
 // Drawings
@@ -86,7 +87,6 @@ const filmData = [
   { id: 26, src: Film26, title: 'Film 26', description: 'Film 26' },
   { id: 27, src: Film27, title: 'Film 27', description: 'Film 27' },
   { id: 14, src: Film14, title: 'Film 14', description: 'Film 14' },
-
 ];
 
 // DANIEL TO-DO: Add digital photography titles + descriptions here.
@@ -293,7 +293,11 @@ function arrowStyle(side) {
 
 // ─── Creative page ─────────────────────────────────────────────────────────────
 export default function Creative() {
-  const [activeTab, setActiveTab] = useState('film');
+  const [searchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState(() => {
+    const tab = searchParams.get('tab');
+    return ['drawings', 'film', 'digital'].includes(tab) ? tab : 'film';
+  });
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const imageMap = { drawings: drawingsData, film: filmData, digital: digitalData };
