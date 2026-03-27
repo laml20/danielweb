@@ -8,8 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/danielweb/assets/index-CRCbkTZY.js"></script>
-    <link rel="stylesheet" crossorigin href="/danielweb/assets/index-CDGtFI60.css">
+    <script>
+      // Single Page Apps for GitHub Pages
+      // Restore the path from the query param set by 404.html
+      (function(l) {
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          });
+          var path = decoded[0].slice(2); // remove 'p='
+          var query = decoded[1] ? '?' + decoded[1].slice(2) : ''; // remove 'q='
+          window.history.replaceState(null, null, '/' + path + query + l.hash);
+        }
+      }(window.location));
+    </script>
+    <script type="module" crossorigin src="/assets/index-Bthjv2i3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-COwGx3KZ.css">
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>danielweb</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // Redirect all 404s back to index.html with the path encoded as a query param
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + '/?p=/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
