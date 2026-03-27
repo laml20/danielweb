@@ -2,7 +2,7 @@
 export default function CenterSection({
     title = "Title",
     text = "Lorem ipsum random text",
-    imageSrc = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+    imageSrc,
     imageAlt = "section visual"
   }) {
     return (
@@ -50,9 +50,11 @@ export default function CenterSection({
         <div className="centersection-container">
           <p className="centersection-title">{title}</p>
           <div className="centersection-text">{text}</div>
-          <div className="centersection-imgwrap">
-            <img src={imageSrc} alt={imageAlt} className="centersection-img" />
-          </div>
+          {imageSrc && (
+            <div className="centersection-imgwrap">
+              <img src={imageSrc} alt={imageAlt} className="centersection-img" />
+            </div>
+          )}
         </div>
       </>
     );
