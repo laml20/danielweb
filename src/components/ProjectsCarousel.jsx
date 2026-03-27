@@ -4,7 +4,7 @@ import Rice from "../media/home/rice.png";
 import Glove from "../media/glove/glove.png";
 import Foot from "../media/foot/foot.png";
 import Roboduck from "../media/roboduck/robotics_1_Page_2 copy.jpg";
-import Sailboat from "../media/sailboat/IMG_3933.jpg";
+import Sailboat from "../media/sailboat/IMG_3933.JPG";
 import Film5 from '../media/film/000000010022.jpg';
 import Film15 from '../media/film/000099410007.jpg';
 import Object1 from '../media/digital/Photography_object_1.jpg';
