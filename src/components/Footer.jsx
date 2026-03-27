@@ -48,7 +48,7 @@ export default function Footer() {
         >
           Gmail
         </a>
-        <span style={{ color: "#6c757d" }}>Updated 26 Mar 26</span>
+        <span style={{ color: "#6c757d" }}>Updated 27 Mar 26</span>
       </Stack>
 
       {/* Mobile layout */}
@@ -72,7 +72,7 @@ export default function Footer() {
             <SiGmail size={20} />
           </a>
         </Stack>
-        <span style={{ color: "#6c757d" }}>Updated 26 Mar 26</span>
+        <span style={{ color: "#6c757d" }}>Updated 27 Mar 26</span>
       </Stack>
     </footer>
   );
