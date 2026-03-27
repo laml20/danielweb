@@ -330,7 +330,7 @@ export default function Creative() {
       <style>{`
         .creative-nav-tab {
           cursor: pointer;
-          font-size: 1.3125rem;
+          font-size: var(--font-nav);
           font-family: 'Martian Mono', monospace;
           color: #6c757d;
           font-weight: normal;
@@ -340,38 +340,61 @@ export default function Creative() {
           white-space: nowrap;
           text-decoration: none;
         }
-        .creative-nav-tab:hover { color: #a51b09; }
+        .creative-nav-tab:hover { color: #c1440e; }
         .creative-nav-tab.active {
-          color: #213547;
+          color: #8e3207;
           font-weight: bold;
-          border-bottom: 2px solid #213547;
+          border-bottom: 2px solid #c1440e;
+        }
+        .creative-nav-outer {
+          position: sticky;
+          top: 64px;
+          z-index: 99;
+          padding: 1rem 3rem 0;
+        }
+        .creative-nav-inner {
+          display: flex;
+          gap: 2.5rem;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+          .creative-nav-outer {
+            padding: 0.75rem 0 0;
+          }
+          .creative-nav-inner {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0.5rem 5% 0;
+            gap: 1.75rem;
+            scrollbar-width: none;
+            max-width: none;
+            margin: 0;
+          }
+          .creative-nav-inner::-webkit-scrollbar { display: none; }
         }
       `}</style>
 
       {/* Nav */}
-      <div style={{
-        position: 'sticky',
-        top: '64px',
-        zIndex: 99,
-        padding: '1rem 3rem',
-        backgroundImage: `url(${bkgd})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
-        <div style={{
-          display: 'flex',
-          gap: '2.5rem',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          maxWidth: '1200px',
-          margin: '0 auto',
-        }}>
+      <div
+        className="creative-nav-outer"
+        style={{
+          backgroundImage: `url(${bkgd})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="creative-nav-inner">
           {tabs.map((tab) => (
             <span
               key={tab.id}
               className={`creative-nav-tab${activeTab === tab.id ? ' active' : ''}`}
-              onClick={() => { setActiveTab(tab.id); setLightboxIndex(null); }}
+              onClick={() => { setActiveTab(tab.id); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             >
               {tab.label}
             </span>

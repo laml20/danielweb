@@ -39,12 +39,13 @@ return (
           }
           .introtextpart button {
             align-self: flex-start;
-            background: rgba(255, 255, 255, 0.75) !important;
+            background: rgba(255, 255, 255, 0.8) !important;
             border: 2px solid black !important;
             padding: 0.5rem 1rem !important;
-            outline: 8px solid rgba(255, 255, 255, 0.75);
+            outline: 8px solid rgba(255, 255, 255, 0.8);
             margin-left: 8px;
             transition: all 0.4s ease;
+            color: black !important;
           }
           .introtextpart button:focus {
             outline: 8px solid rgba(255, 255, 255, 0.75);
@@ -98,13 +99,14 @@ return (
           @media (max-width: 576px) {
             .introsection-wrapper {
               margin: 0;
+              overflow: visible;
             }
             .introsection {
-              grid-template-columns: 1fr;
-              gap: 1rem;
-              /* fixed height to match tablet feel */
-              min-height: 320px;
+              grid-template-columns: 0.6fr 1fr;
+              gap: 0;
+              min-height: 230px;
               align-items: center;
+              overflow: visible;
             }
             /* Hide description and button from inside the background on mobile */
             .introsection .intro-description,
@@ -112,17 +114,19 @@ return (
               display: none;
             }
             .introtextpart {
-              padding: 1rem 5% 0;
-              text-align: center;
+              padding: 1rem 0 1rem 8%;
+              text-align: right;
             }
             .introimgpart {
               justify-content: center;
-              padding: 0 0 1rem;
-              order: -1;
-              margin: 0;
+              padding: 0;
+              order: 1;
+              margin: 0 0 -25px 0;
             }
             .introimgpart img {
-              max-height: 220px;
+              max-height: 400px;
+              width: 100%;
+              object-fit: contain;
             }
             /* Show the below-fold section on mobile */
             .intro-below-fold {
@@ -130,20 +134,25 @@ return (
               flex-direction: column;
               align-items: center;
               text-align: center;
-              padding: 1.5rem 5% 0;
+              padding: 2rem 5% 0;
             }
             .intro-below-fold p {
               margin: 0 0 1.5rem 0;
             }
             .intro-below-fold p span {
+              background: rgba(255, 255, 255, 0.8);
+              padding: 0.1rem 0.4rem;
+              box-decoration-break: clone;
+              -webkit-box-decoration-break: clone;
               line-height: 1.5;
             }
             .intro-below-fold button {
-              background: rgba(255, 255, 255, 0.75) !important;
+              background: rgba(255, 255, 255, 0.8) !important;
               border: 2px solid black !important;
               padding: 0.5rem 1rem !important;
-              outline: 8px solid rgba(255, 255, 255, 0.75);
+              outline: 8px solid rgba(255, 255, 255, 0.8);
               transition: all 0.4s ease;
+              color: black !important;
             }
             .intro-below-fold button:focus {
               outline: 8px solid rgba(255, 255, 255, 0.75);
@@ -159,11 +168,8 @@ return (
               opacity: 1;
               margin-left: 0.5rem;
             }
-            .intro-below-fold hr {
-              width: 60%;
-              border: none;
-              border-top: 1px solid #ccc;
-              margin: 1.5rem auto 0;
+            .intro-below-fold button {
+              margin-bottom: 3rem;
             }
           }
         `}</style>
@@ -192,7 +198,6 @@ return (
   <Link to="/projects">
     <button>Projects</button>
   </Link>
-  <hr />
 </div>
 </>
   );

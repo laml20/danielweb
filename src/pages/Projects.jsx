@@ -27,9 +27,9 @@ const Projects = () => {
       {
         id: 3,
         image: Daniel,
-        title: 'Parkinsons Vibrational Glove',
+        title: 'Parkinsons Vibrotactile Glove',
         description: 'A wearable glove based on Stanford research which delivers vibrations to calm tremors',
-        link: '/projects/vibrational-glove-for-parkinsons-disease'
+        link: '/projects/vibrotactile-glove-for-parkinsons-disease'
       },
       {
           id: 4,
@@ -122,8 +122,9 @@ const Projects = () => {
         <Row key={rowIndex} className="g-3 mb-3 justify-content-center">
           {row.map((project) => (
             <Col key={project.id} md={4}>
-              <Link 
+              <Link
                 to={project.link}  // Change href to "to"
+                className="project-card-link"
                 style={{ textDecoration: 'none', color: 'inherit' }}
                 onMouseEnter={() => setHoveredCard(project.id)}
                 onMouseLeave={handleMouseLeave}
@@ -164,18 +165,15 @@ const Projects = () => {
                     >
                       {project.title}
                     </h5>
-                    <p 
-                      className="card-text" 
-                      style={{ 
+                    <p
+                      className="card-text project-card-desc"
+                      style={{
                         marginBottom: 0,
                         textAlign: 'center',
                         width: '100%'
                       }}
                     >
                       {project.description}
-                      {hoveredCard === project.id && (
-                        <span style={{ marginLeft: '8px' }}>→</span>
-                      )}
                     </p>
                   </div>
                 </div>

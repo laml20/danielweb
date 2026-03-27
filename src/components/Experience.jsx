@@ -37,6 +37,10 @@ export default function Experience() {
           margin: 0;
         }
 
+        .experience-section button {
+          color: black;
+        }
+
         .experience-section button::after {
           content: ' ';
           margin-left: 0;
@@ -44,7 +48,7 @@ export default function Experience() {
         }
 
         .experience-section button:hover::after {
-          content: ' ↗';
+          content: '↗';
           margin-left: 0.5rem;
         }
 
@@ -60,8 +64,20 @@ export default function Experience() {
           }
 
           .experience-title {
-            font-size: 1.3rem;
             margin-bottom: 0.5rem;
+          }
+
+          .experience-content button:last-of-type {
+            margin-bottom: 1rem;
+          }
+
+          .modal-dialog {
+            margin: 0.5rem !important;
+            max-width: calc(100vw - 1rem) !important;
+          }
+
+          .modal-body {
+            padding: 0 !important;
           }
         }
       `}</style>

@@ -29,17 +29,18 @@ export default function LeftWrap({
           }
 
           .leftwrap-title {
-            font-size: calc(1.3rem + .6vw);
+            font-size: var(--font-h3);
             margin: 0 0 0.5rem 0;
           }
 
           .leftwrap-text {
             margin: 0;
+            font-size: var(--font-body);
           }
 
           @media (max-width: 576px) {
             .leftwrap-container {
-              margin: 5% 2%;
+              margin: 5% 8%;
             }
 
             .leftwrap-img {

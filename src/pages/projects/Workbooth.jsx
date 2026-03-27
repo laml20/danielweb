@@ -1,20 +1,19 @@
-import Daniel from "../media/home/daniel.png";
-import ProjectDescription from "../components/ProjectDescription";
-import CenterSection from "../components/CenterSection";
+import Daniel from "../../media/home/daniel.png";
+import ProjectDescription from "../../components/ProjectDescription";
+import CenterSection from "../../components/CenterSection";
 
-export default function DCMotor() {
+export default function Workbooth() {
 return (
 <div>
     <ProjectDescription
-    title="DC Motor"
-    text="A hands-on build of a functioning DC motor, focused on core 
-    prototyping and fabrication techniques"
+    title="Personal Work Booth"
+    text="A personal work station built from scratch — a self-driven project mainly to learn and explore woodworking"
     imageSrc={Daniel}
     />
 
     <CenterSection
                 title = "Project Overview"
-                text = "Lorem ipsum random text"
+                text = "Due to the limited space in my home, I decided to create my own space. A dedicated work booth to allow me to work with decreased distractions on personal projects and learn at my own pace. NOTE: It doubles as a makerspace."
             /> 
         
              <CenterSection

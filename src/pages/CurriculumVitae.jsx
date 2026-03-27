@@ -39,19 +39,59 @@ export default function CurriculumVitae() {
       maxWidth: '1000px'
     }}>
       <style>{`
+        .cv-download-btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; color: black; }
         .cv-download-btn::after {
           content: ' ';
           margin-left: 0;
           transition: all 0.4s ease;
         }
         .cv-download-btn:hover::after {
-          content: ' ⤓';
+          content: '↓';
           margin-left: 0.5rem;
+        }
+        .cv-btn-short { display: none; }
+        .cv-tab {
+          cursor: pointer;
+          font-size: calc(1rem + .2vw);
+          font-family: monospace;
+          color: #6c757d;
+          font-weight: normal;
+          padding-bottom: 0.5rem;
+          border-bottom: 3px solid transparent;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+        }
+        .cv-tab:hover {
+          color: #c1440e;
+        }
+        .cv-tab.active {
+          color: #8e3207;
+          font-weight: bold;
+          border-bottom: 3px solid #c1440e;
+        }
+        .cv-mobile-view { display: none; }
+        @media (max-width: 768px) {
+          .cv-header-row {
+            flex-wrap: nowrap !important;
+          }
+          .cv-btn-full { display: none; }
+          .cv-btn-short { display: inline; }
+          .cv-iframe-wrap { display: none !important; }
+          .cv-trouble-text { display: none; }
+          .cv-mobile-view { display: flex; }
+          .cv-tab-row {
+            flex-wrap: nowrap !important;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            min-width: 0;
+          }
+          .cv-tab-row::-webkit-scrollbar { display: none; }
         }
       `}</style>
       <div>
         {/* Header with Tabs */}
-        <div style={{
+        <div className="cv-header-row" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -60,38 +100,20 @@ export default function CurriculumVitae() {
           gap: '1.5rem'
         }}>
           {/* Tab Navigation */}
-          <div style={{
+          <div className="cv-tab-row" style={{
             display: 'flex',
             gap: '2rem',
             alignItems: 'center'
           }}>
             <div
               onClick={() => setActiveTab('cv')}
-              style={{
-                cursor: 'pointer',
-                fontSize: 'calc(1rem + .2vw)',
-                fontFamily: 'monospace',
-                color: activeTab === 'cv' ? '#213547' : '#6c757d',
-                fontWeight: activeTab === 'cv' ? 'bold' : 'normal',
-                paddingBottom: '0.5rem',
-                borderBottom: activeTab === 'cv' ? '3px solid #881b0d' : '3px solid transparent',
-                transition: 'all 0.3s ease'
-              }}
+              className={`cv-tab${activeTab === 'cv' ? ' active' : ''}`}
             >
               Curriculum Vitae
             </div>
             <div
               onClick={() => setActiveTab('certificates')}
-              style={{
-                cursor: 'pointer',
-                fontSize: 'calc(1rem + .2vw)',
-                fontFamily: 'monospace',
-                color: activeTab === 'certificates' ? '#213547' : '#6c757d',
-                fontWeight: activeTab === 'certificates' ? 'bold' : 'normal',
-                paddingBottom: '0.5rem',
-                borderBottom: activeTab === 'certificates' ? '3px solid #881b0d' : '3px solid transparent',
-                transition: 'all 0.3s ease'
-              }}
+              className={`cv-tab${activeTab === 'certificates' ? ' active' : ''}`}
             >
               Certificates
             </div>
@@ -107,7 +129,8 @@ export default function CurriculumVitae() {
               link.click();
             }}
           >
-            Download CV
+            <span className="cv-btn-full">Download CV</span>
+            <span className="cv-btn-short">CV ↓</span>
           </button>
         </div>
 
@@ -153,7 +176,7 @@ export default function CurriculumVitae() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ 
-                    color: '#923326', 
+                    color: '#8e3207', 
                     textDecoration: 'underline',
                     fontWeight: 'bold'
                   }}
@@ -165,7 +188,7 @@ export default function CurriculumVitae() {
                   href={cvData.path}
                   download={cvData.filename}
                   style={{ 
-                    color: '#923326', 
+                    color: '#8e3207', 
                     textDecoration: 'underline',
                     fontWeight: 'bold'
                   }}

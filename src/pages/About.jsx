@@ -52,7 +52,7 @@ export default function About() {
         }
 
         .about-contact-title {
-          font-size: calc(1.3rem + .6vw);
+          font-size: var(--font-h3);
           margin: 0 0 1.5rem 0;
         }
 
@@ -96,8 +96,7 @@ export default function About() {
           background: transparent !important;
           border: 2px solid black !important;
           padding: 0.5rem 1rem !important;
-
-          font-size: inherit;
+          color: black !important;
           font-family: inherit;
           cursor: pointer;
           transition: all 0.4s ease;

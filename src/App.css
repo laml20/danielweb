@@ -1,4 +1,8 @@
 
+body button {
+  font-size: var(--font-body);
+}
+
 /* projects page cards */
 .card {
   padding: 2em;
@@ -21,8 +25,16 @@
 
 /* projects page: mobile — single column, smaller title, tighter gaps */
 @media (max-width: 576px) {
+  .projects-container {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
   .projects-container .card {
     padding: 0.5em;
+  }
+  .projects-container .card-img-top {
+    width: 75% !important;
+    margin: 0 auto;
   }
   .projects-container .projects-gallery {
     padding-top: 0.75rem !important;
