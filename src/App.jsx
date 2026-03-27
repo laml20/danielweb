@@ -36,14 +36,15 @@ function App() {
           backgroundImage: `url(${bkgd})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          // backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          // minHeight: "100vh",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <ScrollToTop />
         <Header />
-        <main>
+        <main style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CurriculumVitae />} />

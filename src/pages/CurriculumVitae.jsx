@@ -187,7 +187,7 @@ export default function CurriculumVitae() {
                 backgroundColor: '#fafafa'
               }}>
                 <iframe
-                  src={cert.path}
+                  src={`${cert.path}#view=FitV`}
                   title={cert.title}
                   style={{
                     width: '100%',
