@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
+import bkgd from "../media/home/background.png";
 
 export default function Experience() {
   const [showModal, setShowModal] = useState(false);
@@ -36,6 +37,17 @@ export default function Experience() {
           margin: 0;
         }
 
+        .experience-section button::after {
+          content: ' ';
+          margin-left: 0;
+          transition: all 0.4s ease;
+        }
+
+        .experience-section button:hover::after {
+          content: ' ↗';
+          margin-left: 0.5rem;
+        }
+
         /* Mobile styles */
         @media (max-width: 576px) {
           .experience-section {
@@ -59,13 +71,13 @@ export default function Experience() {
           <h3 className="experience-title">My Experience</h3>
           <button
             onClick={() =>
-              openPdfModal("../public/documents/DanielPlascenciaCV.pdf")
+              openPdfModal("/documents/DanielPlascenciaCV.pdf")
             }
           >
             Curriculum Vitae
           </button>
           <button
-            onClick={() => openPdfModal("../public/documents/CV_Certificates_EIT.pdf")}
+            onClick={() => openPdfModal("/documents/CV_Certificates_EIT.pdf")}
           >
             Certificates
           </button>
@@ -73,9 +85,9 @@ export default function Experience() {
 
         {/* Modal */}
         <Modal show={showModal} onHide={closeModal} size="lg" centered>
-          <Modal.Header closeButton>
+          <Modal.Header closeButton style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center" }}>
             <iframe
               src={pdfSrc}
               style={{ width: "100%", height: "500px", border: "none" }}

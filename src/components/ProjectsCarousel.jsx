@@ -1,13 +1,31 @@
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Rice from "../media/home/rice.png";
+import Glove from "../media/glove/glove.png";
+import Foot from "../media/foot/foot.png";
+import Roboduck from "../media/roboduck/robotics_1_Page_2 copy.jpg";
+import Sailboat from "../media/sailboat/IMG_3933.jpg";
+import Film5 from '../media/film/000000010022.jpg';
+import Film15 from '../media/film/000099410007.jpg';
+import Object1 from '../media/digital/Photography_object_1.jpg';
+
 
 const responsiveStyles = `
   .projects-carousel .carousel-caption a {
     text-decoration: none;
   }
   .projects-carousel .carousel-caption a:hover {
-    border-color: #a51b09;
+  }
+
+  .projects-carousel .carousel-caption a::after {
+    content: ' ';
+    margin-left: 0;
+    transition: all 0.4s ease;
+  }
+
+  .projects-carousel .carousel-caption a:hover::after {
+    content: ' →';
+    margin-left: 0.5rem;
   }
 
 
@@ -19,8 +37,8 @@ const responsiveStyles = `
       margin-top: 6% !important;
       margin-bottom: 6% !important;
     }
-    .projects-carousel .slide-container {
-      max-height: 320px;
+    .projects-carousel .slide-container img {
+      height: 320px !important;
     }
   }
 `;
@@ -37,8 +55,9 @@ const styles = {
   },
   image: {
     width: '100%',
-    height: '100%',
+    height: '575px',
     objectFit: 'cover',
+    objectPosition: 'center 25%',
     filter: 'brightness(55%)',
   },
   caption: {
@@ -64,25 +83,53 @@ const ProjectsCarousel = () => {
   const projects = [
     {
       id: 1,
-      image: Rice,
-      title: 'Autonomous Sailboat',
+      image: Glove,
+      title: 'Parkinsons Vibrational Glove',
       button: 'Read More',
-      link: '/projects/autonomous-sailboat-fleet'
+      link: '/projects/vibrational-glove-for-parkinsons-disease',
     },
     {
       id: 2,
-      image: Rice,
-      title: 'Project Title 2',
-      button: 'View Gallery',
-      link: '/projects/project2'
+      image: Sailboat,
+      title: 'Autonomous Sailboat Fleet',
+      button: 'Read More',
+      link: '/projects/autonomous-sailboat-fleet',
     },
     {
       id: 3,
-      image: Rice,
-      title: 'Project Title 3',
+      image: Film5,
+      title: 'Film Photography',
+      button: 'View Gallery',
+      link: '/creative',
+    },
+    {
+      id: 4,
+      image: Foot,
+      title: 'Research: Team Foot',
       button: 'Read More',
-      link: '/projects/project3'
-    }
+      link: '/projects/sensory-feedback-for-smart-prosthetics',
+    },
+    {
+      id: 5,
+      image: Film15,
+      title: 'Film Photography',
+      button: 'View Gallery',
+      link: '/creative',
+    },
+    {
+      id: 6,
+      image: Roboduck,
+      title: 'Robotics: RoboDuck',
+      button: 'Read More',
+      link: '/projects/robotics-robowear',
+    },
+    {
+      id: 7,
+      image: Object1,
+      title: 'Digital Art',
+      button: 'View Gallery',
+      link: '/creative?tab=digital',
+    },
   ];
 
   return (
