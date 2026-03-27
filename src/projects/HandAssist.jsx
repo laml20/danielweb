@@ -4,7 +4,14 @@ import ProjectDescription from "../components/ProjectDescription";
 import LeftWrap from "../components/LeftWrap";
 import RightWrap from "../components/RightWrap";
 import CenterSection from "../components/CenterSection";
+import EDP from "../media/HandWritingAssist/EDP.png"
+import Team from "../media/HandWritingAssist/IMG_7495.JPG"
 import ProjectNav from "../components/ProjectNav";
+import Wanchik from "../media/HandWritingAssist/wanchikwriter.jpg"
+import Table1 from "../media/HandWritingAssist/Table1.png"
+import Table2 from "../media/HandWritingAssist/Table2.png"
+import Table3 from "../media/HandWritingAssist/Table3.png"
+import Table4 from "../media/HandWritingAssist/Table4.png"
 
 const TABS = [
   { id: 'overview', label: 'Project Overview' },
@@ -32,13 +39,13 @@ return (
             <LeftWrap
                 title="Role"
                 text={<p>Designer, Builder, Tester, Group Facilitator</p>}
-                imageSrc={Daniel}
+               
             />
 
             <LeftWrap
                 title="Team Name & Members"
                 text={<p>Helping Hand & Daniel Plascencia, Kushal Gupta, Marco Stine</p>}
-                imageSrc={Daniel}
+                imageSrc={Team}
             />
 
             <LeftWrap
@@ -46,7 +53,7 @@ return (
                 text={
                     <p>First Semester of Freshman Year for ENGI 120. This was the first class of the Engineering Design Minor. The goal was to get an exposure to the engineering design process established by the curriculum through a semester long project. Trial by fire so-to-speak.</p>
                 }
-                imageSrc={Daniel}
+                imageSrc={EDP}
             />
 
             <LeftWrap
@@ -54,7 +61,7 @@ return (
                 text={
                     <p>Prototyping, Project Management, User Testing, Measurement & Analysis, Technical Writing, Collaboration, & Sewing</p>
                 }
-                imageSrc={Daniel}
+                
             />
         </div>
 
@@ -75,7 +82,7 @@ return (
                         <p><strong>Project Importance:</strong> This problem is important because it affects a wide range of people, not just generally older folk. Furthermore, individuals that undergo recovery after life-altering events lose autonomy as they need help and rely on others for assistance. Our device aims to give afflicted individuals a renewed sense of autonomy with their writing. It returns to them the ability to write letters, bank notes, personal journal entries, and more.</p>
                     </>
                 }
-                imageSrc={Daniel}
+                
             />
 
             <RightWrap
@@ -86,7 +93,7 @@ return (
                         <p>Currently in the market there is one full-hand discontinued device dubbed the Wanchik Device. This previous design is both insufficient and outdated. All other devices are either additions to the writing utensil itself to increase the grip surface area or are finger only devices.</p>
                     </>
                 }
-                imageSrc={Daniel}
+                imageSrc={Wanchik}
             />
         </div>
 
@@ -110,7 +117,16 @@ return (
 
                     <p>After dividing the design criteria into constraints and objectives, we created a pairwise comparison chart as seen in Table 2. The results can be seen under the "Rank" column in Table 2 as well.</p>
                 </>}
-                imageSrc={Daniel}
+                imageSrc={Table1}
+                
+            />
+
+              <RightWrap
+                title=""
+                text={<>
+                       </>}
+                imageSrc={Table2}
+                
             />
 
             <RightWrap
