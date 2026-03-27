@@ -13,8 +13,7 @@ return (
 
     <CenterSection
                 title = "Project Overview"
-                text = "These are a collection of small projects done in ENGI 210 class where I learned to use a variety of tools at our makerspace. Lots of practical skills were gained and 
-                a new found confidence to create with my own hands."
+                text = "These are a collection of small projects done in ENGI 210 class where I learned to use a variety of tools at our makerspace. Lots of practical skills were gained and a new found confidence to create with my own hands."
             /> 
         
              <CenterSection

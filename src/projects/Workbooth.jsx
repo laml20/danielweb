@@ -13,8 +13,7 @@ return (
 
     <CenterSection
                 title = "Project Overview"
-                text = "Due to the limited space in my home, I decided to create my own space. A dedicated work booth to allow me to work with decreased distractions on personal projects and 
-                learn at my own pace."
+                text = "Due to the limited space in my home, I decided to create my own space. A dedicated work booth to allow me to work with decreased distractions on personal projects and learn at my own pace. NOTE: It doubles as a makerspace."
             /> 
         
              <CenterSection
