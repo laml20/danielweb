@@ -3,6 +3,8 @@ import Daniel from "../media/home/daniel.png";
 import RightSection from "../components/RightSection";
 import Header from "../components/Header";
 import LeftSection from "../components/LeftSection";
+import EDP from "../media/HandWritingAssist/EDP.png"
+import Team from "../media/HandWritingAssist/IMG_7495.JPG"
 
 export default function HandAssist() {
 return (
@@ -22,7 +24,7 @@ return (
                     <p>Designer, Builder, Tester, Group Facilitator</p>
             
             }
-            imageSrc={Daniel}
+            
         />
 
         <LeftSection
@@ -32,7 +34,7 @@ return (
                     <p>Helping Hand & Daniel Plascencia, Kushal Gupta, Marco Stine</p>
                 </>
             }
-            imageSrc={Daniel}
+            imageSrc={Team}
         />
 
          <LeftSection
@@ -42,7 +44,7 @@ return (
                     <p>First Semester of Freshman Year for ENGI 120. This was the first class of the Engineering Design Minor. The goal was to get an exposure to the engineering design process established by the curriculum through a semester long project. Trial by fire so-to-speak. </p>
                 </>
             }
-            imageSrc={Daniel}
+            imageSrc={EDP}
         />
 
         <LeftSection
