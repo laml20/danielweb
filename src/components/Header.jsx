@@ -44,6 +44,8 @@ export default function Header() {
         }
         .header-brand {
           padding-left: 1rem;
+          font-size: 18px !important;
+          white-space: nowrap;
         }
       }
     `}</style>

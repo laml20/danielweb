@@ -9,6 +9,7 @@ import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import JournalDoodles from "./components/JournalDoodles";
 
 // Project imports
 import Sailboat from "./pages/projects/Sailboat";
@@ -40,11 +41,14 @@ function App() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
+          position: "relative",
+          overflowX: "hidden",
         }}
       >
         <ScrollToTop />
+        <JournalDoodles />
         <Header />
-        <main style={{ flex: 1 }}>
+        <main style={{ flex: 1, position: 'relative', zIndex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CurriculumVitae />} />
