@@ -61,6 +61,8 @@ export default function Header() {
         backgroundImage: `url(${bkgd})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        transform: "translateZ(0)",
+        willChange: "transform",
       }}
     >
       <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
