@@ -41,6 +41,12 @@ const responsiveStyles = `
       height: 320px !important;
     }
   }
+
+  @media (max-width: 576px) {
+    .projects-carousel {
+      margin-bottom: 2rem !important;
+    }
+  }
 `;
 
 const styles = {
@@ -84,9 +90,9 @@ const ProjectsCarousel = () => {
     {
       id: 1,
       image: Glove,
-      title: 'Parkinsons Vibrational Glove',
+      title: 'Parkinsons Vibrotactile Glove',
       button: 'Read More',
-      link: '/projects/vibrational-glove-for-parkinsons-disease',
+      link: '/projects/vibrotactile-glove-for-parkinsons-disease',
     },
     {
       id: 2,
@@ -121,7 +127,7 @@ const ProjectsCarousel = () => {
       image: Roboduck,
       title: 'Robotics: RoboDuck',
       button: 'Read More',
-      link: '/projects/robotics-robowear',
+      link: '/projects/robo-duck',
     },
     {
       id: 7,

@@ -29,17 +29,18 @@ export default function RightWrap({
           }
 
           .rightwrap-title {
-            font-size: calc(1.3rem + .6vw);
+            font-size: var(--font-h3);
             margin: 0 0 0.5rem 0;
           }
 
           .rightwrap-text {
             margin: 0;
+            font-size: var(--font-body);
           }
 
           @media (max-width: 576px) {
             .rightwrap-container {
-              margin: 5% 2%;
+              margin: 5% 8%;
             }
 
             .rightwrap-img {

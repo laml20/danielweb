@@ -2,17 +2,18 @@
     /* Breakpoints */
     --bp-tablet: 992px;
     --bp-mobile: 576px;
-  
-    /* Typography */
-    /* --font-title: calc(1.3rem + 0.6vw);
-    --font-body: 1rem;
-    --font-small: 0.875rem; */
-  
+
+    /* Typography — fluid scales from mobile → desktop */
+    --font-h1:    clamp(1.6rem,  5vw, 2.5rem);
+    --font-h2:    clamp(1.3rem,  4vw, 2rem);
+    --font-h3:    clamp(1.1rem,  3vw, 1.75rem);
+    --font-h4:    clamp(1rem,    2.5vw, 1.4rem);
+    --font-h5:    clamp(0.9rem,  2vw,  1.2rem);
+    --font-body:  clamp(0.875rem, 1.5vw, 1rem);
+    --font-small: clamp(0.75rem,  1.2vw, 0.875rem);
+    --font-nav:   clamp(0.85rem,  1.8vw, 1.1rem);
+
     /* Colors */
-    --color-hover: #a51b09;
-  
-    /* Spacing */
-    /* --padding-section: 3rem 0;   /* you already have this in Home.jsx */
-    /* --padding-page: 0; */
+    --color-hover: #c1440e;
 
 }

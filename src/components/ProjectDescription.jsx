@@ -54,8 +54,8 @@ export default function ProjectDescription({
           @media (max-width: 992px) {
             .proj-desc {
               grid-template-columns: 1fr;
-              gap: 1.5rem;
-              margin: 5% 5%;
+              gap: 0.75rem;
+              margin: 5% 8%;
             }
 
             .proj-desc-textpart {
@@ -79,12 +79,8 @@ export default function ProjectDescription({
 
           @media (max-width: 576px) {
             .proj-desc {
-              margin: 5% 2%;
-              gap: 1rem;
-            }
-
-            .proj-desc-textpart p:first-of-type {
-              font-size: calc(1.2rem + .4vw) !important;
+              margin: 5% 8%;
+              gap: 0.5rem;
             }
 
             .proj-desc-imgpart img {
@@ -101,8 +97,8 @@ export default function ProjectDescription({
             <img src={imageSrc} alt="project visual" />
           </div>
           <div className="proj-desc-textpart">
-            <p style={{ fontSize: 'calc(1.3rem + .6vw)' }}>{title}</p>
-            <p>{text}</p>
+            <p style={{ fontSize: 'var(--font-h1)', margin: '0 0 0.75rem 0' }}>{title}</p>
+            <p style={{ fontSize: 'var(--font-body)', margin: 0 }}>{text}</p>
             {buttonText && (
               buttonLink ? (
                 <Link to={buttonLink}><button>{buttonText}</button></Link>

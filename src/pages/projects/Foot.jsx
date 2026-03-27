@@ -1,6 +1,6 @@
-import Daniel from "../media/home/daniel.png";
-import ProjectDescription from "../components/ProjectDescription";
-import CenterSection from "../components/CenterSection";
+import Daniel from "../../media/home/daniel.png";
+import ProjectDescription from "../../components/ProjectDescription";
+import CenterSection from "../../components/CenterSection";
 
 export default function Foot() {
 return (

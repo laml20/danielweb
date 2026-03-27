@@ -11,16 +11,16 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 // Project imports
-import Sailboat from "./projects/Sailboat";
-import Vending from "./projects/Vending";
-import Foot from "./projects/Foot";
-import Glove from "./projects/Glove";
-import HandAssist from "./projects/HandAssist";
-import Roboduck from "./projects/Roboduck";
-import Prototyping from "./projects/Prototyping";
-import DCMotor from "./projects/DCMotor";
-import REV from "./projects/REV";
-import Workbooth from "./projects/Workbooth";
+import Sailboat from "./pages/projects/Sailboat";
+import Vending from "./pages/projects/Vending";
+import Foot from "./pages/projects/Foot";
+import Glove from "./pages/projects/Glove";
+import HandAssist from "./pages/projects/HandAssist";
+import Roboduck from "./pages/projects/Roboduck";
+import Prototyping from "./pages/projects/Prototyping";
+import DCMotor from "./pages/projects/DCMotor";
+import REV from "./pages/projects/REV";
+import Workbooth from "./pages/projects/Workbooth";
 
 // Style imports
 import bkgd from "./media/home/background.png";
@@ -51,7 +51,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/autonomous-sailboat-fleet" element={<Sailboat />} />
             <Route path="/projects/automated-capsule-vending-machine" element={<Vending />} />
-            <Route path="/projects/vibrational-glove-for-parkinsons-disease" element={<Glove />} />
+            <Route path="/projects/vibrotactile-glove-for-parkinsons-disease" element={<Glove />} />
             <Route path="/projects/handwriting-assistive-device" element={<HandAssist />} />
             <Route path="/projects/sensory-feedback-for-smart-prosthetics" element={<Foot />} />
             <Route path="/projects/robo-duck" element={<Roboduck />} />

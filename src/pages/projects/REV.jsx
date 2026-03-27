@@ -1,20 +1,20 @@
-import Daniel from "../media/home/daniel.png";
-import ProjectDescription from "../components/ProjectDescription";
-import CenterSection from "../components/CenterSection";
+import Daniel from "../../media/home/daniel.png";
+import ProjectDescription from "../../components/ProjectDescription";
+import CenterSection from "../../components/CenterSection";
 
-export default function Roboduck() {
+export default function REV() {
 return (
 <div>
     <ProjectDescription
-    title="RoboDuck - WIP"
-    text="A personal robot built from scratch — a self-driven project mainly to learn and explore robotics"
+    title="REV Aeroshell"
+    text="Structural chassis for the Rice Electric Vehicle competition team, built for integrity and aerodynamic performance"
     imageSrc={Daniel}
     />
 
+
     <CenterSection
                 title = "Project Overview"
-                text = "To get a better grasp of robotics, I decided to endeavor with a personal project of creating my own personal robot. Inspired by small robots like WALL-E, I decided 
-                to create a small duck sized and duck resembling robot. The end goal is to create an autonomous moving, talking robot. Excited to learn as much as I can."
+                text = "This project came through an extracurricular club--Rice Electric Vehicle. In preparation for the annual competition, I aided in designing and manufacturing a new aeroshell."
             /> 
         
              <CenterSection

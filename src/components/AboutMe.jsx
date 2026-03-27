@@ -26,8 +26,9 @@ return (
         }
 
         .abtmetextpart button {
-          width: auto;     
-          align-self: flex-start; 
+          width: auto;
+          align-self: flex-start;
+          color: black !important;
         }
 
         .abtmeimgpart {
@@ -62,7 +63,7 @@ return (
         @media (max-width: 576px) {
           .abtmesection {
             grid-template-columns: 1fr;
-            margin: 17% 15% 5%;
+            margin: 17% 10% 5%;
             gap: 1rem;
           }
 

@@ -32,19 +32,23 @@ const HomePage = () => {
 
         /* Mobile styles */
         @media (max-width: 576px) {
+          .video-section {
+            padding: 1.5rem 0;
+            margin-bottom: 3rem;
+          }
           .video-wrapper {
-            width: 80%;
+            width: 96%;
           }
         }
       `}</style>
 
-      <p style={{textAlign: "center"}}><b>Note: This site is a work in progress.</b></p>
+      <p style={{textAlign: "center", color: "var(--color-hover)"}}><i>Note: This site is a work in progress.</i></p>
         
-      <div className="container">
+      <div className="container-fluid" style={{ maxWidth: '1150px', margin: '0 auto', padding: '0 12px' }}>
         <Intro/>
         <Experience />
 
-        
+
 
         <section className="video-section">
           <div className="video-wrapper">

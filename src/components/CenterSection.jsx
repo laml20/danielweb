@@ -13,7 +13,7 @@ export default function CenterSection({
           }
 
           .centersection-title {
-            font-size: calc(1.3rem + .6vw);
+            font-size: var(--font-h3);
             margin: 0 0 0.5rem 0;
             text-align: left;
           }
@@ -21,6 +21,7 @@ export default function CenterSection({
           .centersection-text {
             text-align: justify;
             margin: 0 0 1.5rem 0;
+            font-size: var(--font-body);
           }
 
           .centersection-imgwrap {
@@ -37,7 +38,7 @@ export default function CenterSection({
 
           @media (max-width: 576px) {
             .centersection-container {
-              margin: 5% 2%;
+              margin: 5% 8%;
             }
 
             .centersection-img {
