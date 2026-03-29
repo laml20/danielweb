@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { FiArrowUpRight } from "react-icons/fi";
 import bkgd from "../media/home/background.png";
+
+const cvImages = [
+  "/documents/DanielPlascenciaCV1.png",
+  "/documents/DanielPlascenciaCV2.png"
+];
+
+const certImages = [
+  "/documents/DanielPlascenciaEIT.png",
+  "/documents/DanielPlascenciaCITI.png",
+  "/documents/DanielPlascenciaCSWA.png",
+  "/documents/DanielPlascenciaOOTE.png"
+];
 
 export default function Experience() {
   const [showModal, setShowModal] = useState(false);
-  const [pdfSrc, setPdfSrc] = useState("");
+  const [modalImages, setModalImages] = useState([]);
 
-  const openPdfModal = (src) => {
-    setPdfSrc(src);
+  const openModal = (images) => {
+    setModalImages(images);
     setShowModal(true);
   };
 
   const closeModal = () => {
     setShowModal(false);
-    setPdfSrc("");
+    setModalImages([]);
   };
 
   return (
@@ -41,16 +54,10 @@ export default function Experience() {
           color: black;
         }
 
-        .experience-section button::after {
-          content: ' ';
-          margin-left: 0;
-          transition: all 0.4s ease;
-        }
-
-        .experience-section button:hover::after {
-          content: '↗';
-          margin-left: 0.5rem;
-        }
+        .experience-section button { display: inline-flex; align-items: center; }
+        .experience-section button::after, .experience-section button:hover::after { content: '' !important; margin-left: 0 !important; }
+        .experience-section button .exp-btn-icon { opacity: 0; width: 0; overflow: hidden; margin-left: 0; transition: opacity 0.2s ease, width 0.2s ease, margin-left 0.2s ease, transform 0.2s ease; }
+        .experience-section button:hover .exp-btn-icon { opacity: 1; width: 15px; margin-left: 0.3rem; transform: translate(2px, -2px); }
 
         /* Mobile styles */
         @media (max-width: 576px) {
@@ -85,17 +92,11 @@ export default function Experience() {
       <section className="experience-section">
         <div className="experience-content">
           <h3 className="experience-title">My Experience</h3>
-          <button
-            onClick={() =>
-              openPdfModal("/documents/DanielPlascenciaCV.pdf")
-            }
-          >
-            Curriculum Vitae
+          <button onClick={() => openModal(cvImages)}>
+            Curriculum Vitae <FiArrowUpRight className="exp-btn-icon" size={15} />
           </button>
-          <button
-            onClick={() => openPdfModal("/documents/CV_Certificates_EIT.pdf")}
-          >
-            Certificates
+          <button onClick={() => openModal(certImages)}>
+            Certificates <FiArrowUpRight className="exp-btn-icon" size={15} />
           </button>
         </div>
 
@@ -103,11 +104,17 @@ export default function Experience() {
         <Modal show={showModal} onHide={closeModal} size="lg" centered>
           <Modal.Header closeButton style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           </Modal.Header>
-          <Modal.Body style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-            <iframe
-              src={pdfSrc}
-              style={{ width: "100%", height: "500px", border: "none" }}
-            ></iframe>
+          <Modal.Body style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center", maxHeight: "80vh", overflowY: "auto" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              {modalImages.map((src, index) => (
+                <img
+                  key={index}
+                  src={src}
+                  alt={`Page ${index + 1}`}
+                  style={{ width: "100%", display: "block", borderRadius: "4px" }}
+                />
+              ))}
+            </div>
           </Modal.Body>
         </Modal>
       </section>

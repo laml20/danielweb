@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import bkgd from '../media/home/background.png';
+import paperTexture from '../media/home/paper_texture_tile.jpeg';
 
 // Drawings
 
@@ -384,9 +384,9 @@ export default function Creative() {
       <div
         className="creative-nav-outer"
         style={{
-          backgroundImage: `url(${bkgd})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: `url(${paperTexture})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '200px',
         }}
       >
         <div className="creative-nav-inner">

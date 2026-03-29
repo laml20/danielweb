@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import bkgd from "../media/home/background.png"; // Import the background image
+import paperTexture from "../media/home/paper_texture_tile.jpeg";
 
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
@@ -52,17 +52,15 @@ export default function Header() {
     <Navbar
       ref={navbarRef}
       expand="lg"
-      sticky="top"
+      fixed="top"
       expanded={expanded}
       onToggle={setExpanded}
       style={{
         margin: 0,
         padding: 0,
-        backgroundImage: `url(${bkgd})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        transform: "translateZ(0)",
-        willChange: "transform",
+        backgroundImage: `url(${paperTexture})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "200px",
       }}
     >
       <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>

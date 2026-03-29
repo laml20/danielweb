@@ -6,7 +6,7 @@ import bkgd from "../media/home/background.png"; // Import the background image
 
 export default function Footer() {
   return (
-    <footer className="py-5 mt-4 text-center">
+    <footer className="py-5 text-center">
       <style>{`
         footer {
           font-size: var(--font-body);

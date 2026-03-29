@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import bkgd from '../media/home/background.png';
+import paperTexture from '../media/home/paper_texture_tile.jpeg';
 
 const ProjectNav = ({ tabs = [] }) => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || '');
@@ -39,17 +39,24 @@ const ProjectNav = ({ tabs = [] }) => {
           font-weight: bold;
           border-bottom: 2px solid #c1440e;
         }
+        .project-nav-outer {
+          position: sticky;
+          top: 80px;
+          z-index: 99;
+          padding: 1rem 3rem 0;
+        }
         .project-nav-inner {
           display: flex;
           gap: 2.5rem;
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
+          max-width: 1200px;
+          margin: 0 auto;
         }
         @media (max-width: 768px) {
           .project-nav-outer {
-            margin: 1.5rem 0 !important;
-            padding: 0.75rem 0 0 0 !important;
+            padding: 0.75rem 0 0;
           }
           .project-nav-inner {
             flex-wrap: nowrap;
@@ -59,21 +66,16 @@ const ProjectNav = ({ tabs = [] }) => {
             padding: 0.5rem 5% 0;
             gap: 1.75rem;
             scrollbar-width: none;
+            max-width: none;
+            margin: 0;
           }
-          .project-nav-inner::-webkit-scrollbar {
-            display: none;
-          }
+          .project-nav-inner::-webkit-scrollbar { display: none; }
         }
       `}</style>
       <div data-project-nav className="project-nav-outer" style={{
-        position: 'sticky',
-        top: '64px',
-        zIndex: 99,
-        padding: '1rem 0 0 0',
-        margin: '3rem',
-        backgroundImage: `url(${bkgd})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundImage: `url(${paperTexture})`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '200px',
       }}>
         <div className="project-nav-inner">
           {tabs.map((tab) => (
