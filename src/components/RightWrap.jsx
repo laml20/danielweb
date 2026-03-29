@@ -1,9 +1,10 @@
 // Image floated right, text wraps around it (Word doc style)
 export default function RightWrap({
-    title = "Title",
+    title,
     text = "Lorem ipsum random text",
     imageSrc,
-    imageAlt = "section visual"
+    imageAlt = "section visual",
+    id,
   }) {
     return (
       <>
@@ -25,7 +26,7 @@ export default function RightWrap({
             height: auto;
             max-height: 350px;
             object-fit: contain;
-            margin: 0 0 1rem 1.5rem;
+            margin: 2.5rem 0 0.5rem 2.5rem;
           }
 
           .rightwrap-title {
@@ -53,9 +54,9 @@ export default function RightWrap({
           }
         `}</style>
 
-        <div className="rightwrap-container">
+        <div id={id} className="rightwrap-container" style={{ scrollMarginTop: '8rem' }}>
           {imageSrc && <img src={imageSrc} alt={imageAlt} className="rightwrap-img" />}
-          <p className="rightwrap-title">{title}</p>
+          {title && <p className="rightwrap-title">{title}</p>}
           <div className="rightwrap-text">{text}</div>
         </div>
       </>

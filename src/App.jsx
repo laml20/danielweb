@@ -45,7 +45,7 @@ function App() {
         <ScrollToTop />
         <JournalDoodles />
         <Header />
-        <main style={{ flex: 1, position: 'relative', zIndex: 1, paddingTop: "80px" }}>
+        <main style={{ flex: 1, paddingTop: "80px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CurriculumVitae />} />

@@ -1,9 +1,10 @@
 // Image floated left, text wraps around it (Word doc style)
 export default function LeftWrap({
-    title = "Title",
+    title,
     text = "Lorem ipsum random text",
     imageSrc,
-    imageAlt = "section visual"
+    imageAlt = "section visual",
+    id,
   }) {
     return (
       <>
@@ -25,7 +26,7 @@ export default function LeftWrap({
             height: auto;
             max-height: 350px;
             object-fit: contain;
-            margin: 0 1.5rem 1rem 0;
+            margin: 0.5rem 2.5rem 1rem 0;
           }
 
           .leftwrap-title {
@@ -53,9 +54,9 @@ export default function LeftWrap({
           }
         `}</style>
 
-        <div className="leftwrap-container">
+        <div id={id} className="leftwrap-container" style={{ scrollMarginTop: '8rem' }}>
           {imageSrc && <img src={imageSrc} alt={imageAlt} className="leftwrap-img" />}
-          <p className="leftwrap-title">{title}</p>
+          {title && <p className="leftwrap-title">{title}</p>}
           <div className="leftwrap-text">{text}</div>
         </div>
       </>

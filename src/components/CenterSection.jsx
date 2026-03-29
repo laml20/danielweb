@@ -3,7 +3,8 @@ export default function CenterSection({
     title = "Title",
     text = "Lorem ipsum random text",
     imageSrc,
-    imageAlt = "section visual"
+    imageAlt = "section visual",
+    id,
   }) {
     return (
       <>
@@ -48,7 +49,7 @@ export default function CenterSection({
           }
         `}</style>
 
-        <div className="centersection-container">
+        <div id={id} className="centersection-container" style={{ scrollMarginTop: '8rem' }}>
           <p className="centersection-title">{title}</p>
           <div className="centersection-text">{text}</div>
           {imageSrc && (

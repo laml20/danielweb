@@ -20,6 +20,7 @@ export default function Header() {
   return (
     <>
     <style>{`
+      .navbar.fixed-top { z-index: 100 !important; }
       .header-nav .nav-link {
         color: #213547;
       }
@@ -61,6 +62,7 @@ export default function Header() {
         backgroundImage: `url(${paperTexture})`,
         backgroundRepeat: "repeat",
         backgroundSize: "200px",
+        zIndex: 100,
       }}
     >
       <Container style={{ paddingTop: "20px", paddingBottom: "20px" }}>
