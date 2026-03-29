@@ -7,7 +7,7 @@ import CenterSection from "../../components/CenterSection";
 import EDP from "../../media/HandWritingAssist/EDP.png"
 import Team from "../../media/HandWritingAssist/IMG_7495.JPG"
 import ProjectNav from "../../components/ProjectNav";
-import Wanchik from "../../media/HandWritingAssist/wanchikwriter.jpg"
+import Wanchik from "../../media/HandWritingAssist/wanchikwriter.png"
 import Table1 from "../../media/HandWritingAssist/Table1.png"
 import Table2 from "../../media/HandWritingAssist/Table2.png"
 import Table3 from "../../media/HandWritingAssist/Table3.png"
@@ -34,62 +34,43 @@ return (
         <ProjectNav tabs={TABS} />
 
         <div id="overview" style={{ scrollMarginTop: '4rem' }}>
-            <p style={{textAlign: "center"}}><b>--- The Project Overview ---</b></p>
-
             <LeftWrap
-                title="Role"
-                text={<p>Designer, Builder, Tester, Group Facilitator</p>}
-               
-            />
-
-            <LeftWrap
-                title="Team Name & Members"
-                text={<p>Helping Hand & Daniel Plascencia, Kushal Gupta, Marco Stine</p>}
+                title="Project Overview"
+                text={
+                    <>
+                    <p><strong>Role: </strong>Designer, Builder, Tester, Group Facilitator</p>
+                    <p><strong>Team Helping Hand: </strong>Daniel Plascencia, Kushal Gupta, Marco Stine</p>
+                    <p><strong>ENGI 120, Freshman Fall: </strong>This was the first class of the Engineering Design Minor. The goal was to get an exposure to the engineering design process established by the curriculum through a semester long project. Trial by fire so-to-speak.</p>
+                    <p><strong>Tools & Skills: </strong>Prototyping, Project Management, User Testing, Measurement & Analysis, Technical Writing, Collaboration, & Sewing</p>
+                    </>
+                }
                 imageSrc={Team}
-            />
-
-            <LeftWrap
-                title="Timeframe & Context"
-                text={
-                    <p>First Semester of Freshman Year for ENGI 120. This was the first class of the Engineering Design Minor. The goal was to get an exposure to the engineering design process established by the curriculum through a semester long project. Trial by fire so-to-speak.</p>
-                }
-                imageSrc={EDP}
-            />
-
-            <LeftWrap
-                title="Tools & Skills"
-                text={
-                    <p>Prototyping, Project Management, User Testing, Measurement & Analysis, Technical Writing, Collaboration, & Sewing</p>
-                }
-                
             />
         </div>
 
         <div id="problem-statement" style={{ scrollMarginTop: '4rem' }}>
-            <p style={{textAlign: "center"}}><b>--- The Project Details ---</b></p>
-
             <RightWrap
-                title="Clarify Team Assignment"
+                title="Problem Statement"
                 text={
                     <>
                         <p><strong>Client:</strong> Gloria Sipakati (Clinical Specialist)</p>
-                        <p><strong>Problem Statement:</strong> Users with limited finger dexterity (due to stroke, cerebral palsy, injury, etc..) often cannot hold pens reliably. This project aims to create an inconspicuous device that enables the user to independently hold and write with a writing utensil. Our challenge was to create a device that would:</p>
+                        <p>Users with limited finger dexterity (due to stroke, cerebral palsy, injury, etc..) often cannot hold pens reliably. This project aims to create an inconspicuous device that enables the user to independently hold and write with a writing utensil. Our challenge was to create a device that would:</p>
                         <ul>
                             <li><strong>Enable independent writing</strong> without assistance from caregivers</li>
                             <li><strong>Maintain user dignity</strong> through inconspicuous design</li>
                             <li><strong>Provide reliable functionality</strong> across various writing scenarios</li>
                         </ul>
-                        <p><strong>Project Importance:</strong> This problem is important because it affects a wide range of people, not just generally older folk. Furthermore, individuals that undergo recovery after life-altering events lose autonomy as they need help and rely on others for assistance. Our device aims to give afflicted individuals a renewed sense of autonomy with their writing. It returns to them the ability to write letters, bank notes, personal journal entries, and more.</p>
+                        <p>This problem is important because it affects a wide range of people, not just generally older folk. Furthermore, individuals that undergo recovery after life-altering events lose autonomy as they need help and rely on others for assistance. Our device aims to give afflicted individuals a renewed sense of autonomy with their writing. It returns to them the ability to write letters, bank notes, personal journal entries, and more.</p>
                     </>
                 }
-                
+                imageSrc={EDP}
             />
 
             <RightWrap
-                title="Understand Problem Space"
+                title="Background"
                 text={
                     <>
-                        <p><strong>Background Research:</strong></p>
+                        <p><strong>Understanding the problem space</strong></p>
                         <p>Currently in the market there is one full-hand discontinued device dubbed the Wanchik Device. This previous design is both insufficient and outdated. All other devices are either additions to the writing utensil itself to increase the grip surface area or are finger only devices.</p>
                     </>
                 }
@@ -99,7 +80,7 @@ return (
 
         <div id="design-process" style={{ scrollMarginTop: '4rem' }}>
             <RightWrap
-                title="Define Design Criteria"
+                title="Design Criteria"
                 text={<>
                     <p>T1: Getting the objectives was a process of trial and error. There was lots of going back-and-forth with the client as well as the user to arrive at principal aspects needed for the handwriting assist to be deemed successful.</p>
 
@@ -121,7 +102,7 @@ return (
                 
             />
 
-              <RightWrap
+              <CenterSection
                 title=""
                 text={<>
                        </>}

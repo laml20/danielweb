@@ -24,31 +24,28 @@ import REV from "./pages/projects/REV";
 import Workbooth from "./pages/projects/Workbooth";
 
 // Style imports
-import bkgd from "./media/home/background.png";
+import paperTexture from "./media/home/paper_texture_tile.jpeg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
   return (
     <Router basename="/">
-      <ScrollToTop />
       <div
         style={{
-          backgroundImage: `url(${bkgd})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          backgroundImage: `url(${paperTexture})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "200px",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           position: "relative",
-          overflowX: "hidden",
         }}
       >
         <ScrollToTop />
         <JournalDoodles />
         <Header />
-        <main style={{ flex: 1, position: 'relative', zIndex: 1 }}>
+        <main style={{ flex: 1, position: 'relative', zIndex: 1, paddingTop: "80px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cv" element={<CurriculumVitae />} />
