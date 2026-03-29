@@ -204,7 +204,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         position: 'fixed',
         inset: 0,
         background: 'rgba(0,0,0,0.88)',
-        zIndex: 1030,
+        zIndex: 1031,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -212,6 +212,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
     >
       {/* Prev arrow */}
       <button
+        className="lightbox-arrow"
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
         style={arrowStyle('left')}
       >
@@ -263,6 +264,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 
       {/* Next arrow */}
       <button
+        className="lightbox-arrow"
         onClick={(e) => { e.stopPropagation(); onNext(); }}
         style={arrowStyle('right')}
       >
@@ -293,7 +295,7 @@ function arrowStyle(side) {
 
 // ─── Creative page ─────────────────────────────────────────────────────────────
 export default function Creative() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(() => {
     const tab = searchParams.get('tab');
     return ['drawings', 'film', 'digital'].includes(tab) ? tab : 'film';
@@ -394,7 +396,7 @@ export default function Creative() {
             <span
               key={tab.id}
               className={`creative-nav-tab${activeTab === tab.id ? ' active' : ''}`}
-              onClick={() => { setActiveTab(tab.id); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { setActiveTab(tab.id); setSearchParams({ tab: tab.id }); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             >
               {tab.label}
             </span>
