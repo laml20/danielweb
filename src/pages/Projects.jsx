@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom'; // Add this import
 import { useState } from 'react';
 import Daniel from "../media/home/daniel.png";
 import HandwriteAssist from "../media/projects/HandwriteAssist.png";
-import VendingMachine from "../media/projects/VendingMachine.png";
+import VendingMachine from "../media/projects/VendingMachine1.png";
+import Sailboat from "../media/projects/5.png";
+import Glove from "../media/projects/6.png";
+import Foot from "../media/projects/7.png";
+import DCMotor from "../media/projects/8.png";
+import Aeroshell from "../media/projects/9.png";
+import RoboDuck from "../media/projects/10.png";
+import Prototyping from "../media/projects/11.png";
+import WorkBooth from "../media/projects/12.png";
 
 const Projects = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -11,11 +19,46 @@ const Projects = () => {
   
   const projects = [
       {
+          id: 5,
+          image: Foot,
+          title: 'Research: Team Foot',
+          description: 'A haptic device for transfemoral amputees which provides feedback to improve balance',
+          link: '/projects/sensory-feedback-for-smart-prosthetics'
+      },
+      {
         id: 1,
-        image: Daniel,
+        image: Sailboat,
         title: 'Senior Design: Autonomous Sailboat Fleet',
         description: 'Two sailboats that communicate and self-navigate to a given endpoint while carrying cargo',
         link: '/projects/autonomous-sailboat-fleet'
+      },
+      {
+        id: 3,
+        image: Glove,
+        title: 'Parkinsons Vibrotactile Glove',
+        description: 'A wearable glove based on Stanford research which delivers vibrations to calm tremors',
+        link: '/projects/vibrotactile-glove-for-parkinsons-disease'
+      },
+      {
+          id: 6,
+          image: DCMotor,
+          title: 'DC Motor',
+          description: 'A hands-on build of a functioning DC motor, focused on core prototyping and fabrication techniques',
+          link: '/projects/dc-motor'
+      },
+      {
+          id: 8,
+          image: RoboDuck,
+          title: 'RoboDuck - WIP',
+          description: 'A personal robot built from scratch — a self-driven project mainly to learn and explore robotics',
+          link: '/projects/robo-duck'
+      },   
+      {
+        id: 4,
+        image: HandwriteAssist,
+        title: 'Handwriting Assistive Device',
+        description: 'A wearable device for people with limited hand dexterity to enable independent writing',
+        link: '/projects/handwriting-assistive-device'
       },
       {
         id: 2,
@@ -25,57 +68,22 @@ const Projects = () => {
         link: '/projects/automated-capsule-vending-machine'
       },
       {
-        id: 3,
-        image: Daniel,
-        title: 'Parkinsons Vibrotactile Glove',
-        description: 'A wearable glove based on Stanford research which delivers vibrations to calm tremors',
-        link: '/projects/vibrotactile-glove-for-parkinsons-disease'
-      },
-      {
-          id: 4,
-          image: HandwriteAssist,
-          title: 'Handwriting Assistive Device',
-          description: 'A wearable device for people with limited hand dexterity to enable independent writing',
-          link: '/projects/handwriting-assistive-device'
-        },
-      {
-          id: 5,
-          image: Daniel,
-          title: 'Research: Team Foot',
-          description: 'A haptic device for transfemoral amputees which provides feedback to improve balance',
-          link: '/projects/sensory-feedback-for-smart-prosthetics'
-      },
-      {
-          id: 6,
-          image: Daniel,
-          title: 'DC Motor',
-          description: 'A hands-on build of a functioning DC motor, focused on core prototyping and fabrication techniques',
-          link: '/projects/dc-motor'
-      },
-      {
           id: 7,
-          image: Daniel,
+          image: Aeroshell,
           title: 'REV Aeroshell',
           description: 'Structural chassis for the Rice Electric Vehicle competition team, built for integrity and aerodynamic performance',
           link: '/projects/rev-aeroshell'
-      },
-      {
-          id: 8,
-          image: Daniel,
-          title: 'RoboDuck - WIP',
-          description: 'A personal robot built from scratch — a self-driven project mainly to learn and explore robotics',
-          link: '/projects/robo-duck'
-      },    
+      }, 
       {
           id: 9,
-          image: Daniel,
+          image: WorkBooth,
           title: 'Personal Work Booth',
           description: 'A personal work station built from scratch — a self-driven project mainly to learn and explore woodworking',
           link: '/projects/personal-work-booth'
       }, 
       {
           id: 10,
-          image: Daniel,
+          image: Prototyping,
           title: 'ENGI 210: Prototyping & Fabrication',
           description: 'A hands-on class covering 3D printing, fabrication methods, and other prototyping techniques',
           link: '/projects/prototyping-fabrication'
