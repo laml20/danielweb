@@ -427,6 +427,13 @@ export default function Creative() {
           }
           .creative-nav-inner::-webkit-scrollbar { display: none; }
         }
+        .creative-content {
+          animation: creativeFadeIn 0.25s ease;
+        }
+        @keyframes creativeFadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
       `}</style>
 
       {/* Nav */}
@@ -443,7 +450,7 @@ export default function Creative() {
             <span
               key={tab.id}
               className={`creative-nav-tab${activeTab === tab.id ? ' active' : ''}`}
-              onClick={() => { setActiveTab(tab.id); setSearchParams({ tab: tab.id }); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { setActiveTab(tab.id); setSearchParams({ tab: tab.id }); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'instant' }); }}
             >
               {tab.label}
             </span>
@@ -452,7 +459,7 @@ export default function Creative() {
       </div>
 
       {/* Content */}
-      <div style={{ padding: '2rem 3rem 3rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <div key={activeTab} className="creative-content" style={{ padding: '2rem 3rem 3rem', maxWidth: '1200px', margin: '0 auto' }}>
         <p style={{
           fontFamily: "'IBM Plex Mono', monospace",
           fontSize: 'calc(0.8rem + 0.2vw)',

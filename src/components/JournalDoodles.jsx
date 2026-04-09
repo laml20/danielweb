@@ -81,8 +81,8 @@ export default function JournalDoodles() {
 
   useEffect(() => {
     if (!show) return;
+    setPageHeight(0);
     const measure = () => setPageHeight(document.body.scrollHeight);
-    // Wait a frame for page content to paint first
     const raf = requestAnimationFrame(measure);
     const ro = new ResizeObserver(measure);
     ro.observe(document.body);
