@@ -15,7 +15,7 @@ import doodle12 from '../media/doodles/12.png';
 import doodle13 from '../media/doodles/13.png';
 import doodle14 from '../media/doodles/14.png';
 
-const ALL_DOODLES = [doodle1, doodle2, doodle3, doodle4, doodle5, doodle6, doodle7, doodle8, doodle9, doodle10, doodle11, doodle12, doodle14, doodle13];
+const ALL_DOODLES = [doodle1, doodle2, doodle3, doodle4, doodle5, doodle6, doodle8, doodle9, doodle10, doodle11, doodle12, doodle14, doodle13];
 
 const SPACING_FACTOR_DEFAULT = 1.75;
 const SPACING_FACTOR_PROJECTS = 1.3;
