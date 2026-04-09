@@ -4,6 +4,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import bkgd from "../media/home/background.png"; // Import the background image
 
+const UPDATED_DATE = "8 Apr 26";
+
 export default function Footer() {
   return (
     <footer className="py-5 text-center">
@@ -48,7 +50,7 @@ export default function Footer() {
         >
           Gmail
         </a>
-        <span style={{ color: "#6c757d" }}>Updated 27 Mar 26</span>
+        <span style={{ color: "#6c757d" }}>Updated {UPDATED_DATE}</span>
       </Stack>
 
       {/* Mobile layout */}
@@ -72,7 +74,7 @@ export default function Footer() {
             <SiGmail size={20} />
           </a>
         </Stack>
-        <span style={{ color: "#6c757d" }}>Updated 27 Mar 26</span>
+        <span style={{ color: "#6c757d" }}>Updated {UPDATED_DATE}</span>
       </Stack>
     </footer>
   );

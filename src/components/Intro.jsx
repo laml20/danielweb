@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Daniel from "../media/home/Daniel2.png";
+import Daniel from "../media/home/Daniel3.png";
 import Rice from "../media/home/Rice5.png";
 
 export default function Intro() {

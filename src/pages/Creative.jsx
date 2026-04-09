@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { useSearchParams } from 'react-router-dom';
 import paperTexture from '../media/home/paper_texture_tile.jpeg';
 
@@ -136,17 +137,17 @@ const filmData = [
 
 // DANIEL TO-DO: Add digital photography titles + descriptions here.
 const digitalData = [
-  { id: 1, src: LifeAndDeath1, title: 'Life and Death 1', description: 'A photograph capturing the contrast between life and death.' },
-  { id: 2, src: LifeAndDeath2, title: 'Life and Death 2', description: 'Another perspective on the theme of life and death.' },
-  { id: 3, src: Light1, title: 'Light 1', description: 'A simple yet powerful image of light and shadow.' },
-  { id: 4, src: Light2, title: 'Light 2', description: 'A different composition exploring the concept of light.' },
-  { id: 5, src: Object1, title: 'Object 1', description: 'A photograph focusing on the beauty of everyday objects.' },
-  { id: 7, src: Object3, title: 'Object 3', description: 'A creative composition highlighting the shapes of objects.' },
-  { id: 8, src: Scars1, title: 'Scars 1', description: 'An intimate photograph exploring the theme of scars and healing.' },
-  { id: 9, src: Scars2, title: 'Scars 2', description: 'A different perspective on scars and their stories.' },
-  { id: 10, src: Scars3, title: 'Scars 3', description: 'A close-up image focusing on the textures of scars.' },
-  { id: 11, src: Scars4, title: 'Scars 4', description: 'A final photograph in the scars series, capturing the resilience and beauty of healing.' },
-  { id: 6, src: Object2, title: 'Object 2', description: 'Another take on the theme of objects and their forms.' },
+  { id: 1, src: LifeAndDeath1, title: 'Life and Death 1', description: 'Life and Death 1' },
+  { id: 2, src: LifeAndDeath2, title: 'Life and Death 2', description: 'Life and Death 2' },
+  { id: 3, src: Light1, title: 'Light 1', description: 'Light 1' },
+  { id: 4, src: Light2, title: 'Light 2', description: 'Light 2' },
+  { id: 5, src: Object1, title: 'Object 1', description: 'Object 1' },
+  { id: 7, src: Object3, title: 'Object 3', description: 'Object 3' },
+  { id: 8, src: Scars1, title: 'Scars 1', description: 'Scars 1' },
+  { id: 9, src: Scars2, title: 'Scars 2', description: 'Scars 2' },
+  { id: 10, src: Scars3, title: 'Scars 3', description: 'Scars 3' },
+  { id: 11, src: Scars4, title: 'Scars 4', description: 'Scars 4' },
+  { id: 6, src: Object2, title: 'Object 2', description: 'Object 2' },
 ];
 
 // ─── ImageGrid ────────────────────────────────────────────────────────────────
@@ -242,14 +243,14 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
     return () => window.removeEventListener('keydown', handleKey);
   }, [onClose, onPrev, onNext]);
 
-  return (
+  return createPortal(
     <div
       onClick={onClose}
       style={{
         position: 'fixed',
         inset: 0,
         background: 'rgba(0,0,0,0.88)',
-        zIndex: 1031,
+        zIndex: 9999,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -315,7 +316,8 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       >
         ›
       </button>
-    </div>
+    </div>,
+    document.body
   );
 }
 
