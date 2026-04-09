@@ -1,4 +1,4 @@
-import Daniel from "../../media/home/daniel.png";
+import Icon from "../../media/projects/9.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
@@ -18,7 +18,7 @@ return (
     <ProjectDescription
     title="REV Aeroshell"
     text="Structural chassis for the Rice Electric Vehicle competition team, built for integrity and aerodynamic performance"
-    imageSrc={Daniel}
+    imageSrc={Icon}
     />
 
     <ProjectNav tabs={TABS} />

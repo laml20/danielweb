@@ -1,4 +1,4 @@
-import Daniel from "../../media/home/daniel.png";
+import Icon from "../../media/projects/11.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
@@ -18,7 +18,7 @@ return (
     <ProjectDescription
     title="ENGI 210: Prototyping & Fabrication"
     text="A hands-on class covering 3D printing, fabrication methods, and other prototyping techniques"
-    imageSrc={Daniel}
+    imageSrc={Icon}
     />
 
     <ProjectNav tabs={TABS} />

@@ -1,5 +1,4 @@
 import HandwriteAssist from "../../media/projects/HandwriteAssist.png";
-import Daniel from "../../media/home/daniel.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import LeftWrap from "../../components/LeftWrap";
 import RightWrap from "../../components/RightWrap";
@@ -26,7 +25,7 @@ export default function HandAssist() {
 return (
     <div>
         <ProjectDescription
-            title="Handwriting Assist for Individuals with Limited Manual Dexterity"
+            title="Handwriting Assistive Device"
             text="This project addresses a critical need for individuals experiencing limited hand mobility due to aging, injury, or neurological conditions. Our team developed an inconspicuous assistive device that enables users to independently hold and write with standard writing utensils, providing autonomy in personal expression and daily writing tasks."
             imageSrc={HandwriteAssist}
         />

@@ -1,4 +1,4 @@
-import Daniel from "../../media/home/daniel.png";
+import Icon from "../../media/projects/12.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
@@ -18,7 +18,7 @@ return (
     <ProjectDescription
     title="Personal Work Booth"
     text="A personal work station built from scratch — a self-driven project mainly to learn and explore woodworking"
-    imageSrc={Daniel}
+    imageSrc={Icon}
     />
 
     <ProjectNav tabs={TABS} />
