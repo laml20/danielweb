@@ -3,6 +3,29 @@ import { useSearchParams } from 'react-router-dom';
 import paperTexture from '../media/home/paper_texture_tile.jpeg';
 
 // Drawings
+import Drawing1 from '../media/drawings/1.png';
+import Drawing2 from '../media/drawings/2.png';
+import Drawing3 from '../media/drawings/3.png';
+import Drawing4 from '../media/drawings/4.png';
+import Drawing5 from '../media/drawings/5.png';
+import Drawing6 from '../media/drawings/6.png';
+import Drawing7 from '../media/drawings/7.png';
+import Drawing8 from '../media/drawings/8.png'; 
+import Drawing9 from '../media/drawings/9.png';
+import Drawing10 from '../media/drawings/10.png';
+import Drawing11 from '../media/drawings/11.png';
+import Drawing12 from '../media/drawings/1-1.png';
+import Drawing13 from '../media/drawings/2-1.png';
+import Drawing14 from '../media/drawings/1-2.png';
+import Drawing15 from '../media/drawings/2-2.png';
+import Drawing16 from '../media/drawings/3-2.png';
+import Drawing17 from '../media/drawings/4-2.png';
+import Drawing18 from '../media/drawings/5-2.png';
+import Drawing19 from '../media/drawings/6-2.png';
+import Drawing20 from '../media/drawings/7-2.png';
+import Drawing21 from '../media/drawings/8-2.png';
+import Drawing22 from '../media/drawings/9-2.png';
+import Drawing23 from '../media/drawings/10-2.png'; 
 
 // Film Photography
 import Film1 from '../media/film/000000010008.jpg';
@@ -55,7 +78,29 @@ const tabs = [
 
 // DANIEL TO-DO: Add drawing titles + descriptions here.
 const drawingsData = [
-  // { id: 1, src: ..., title: '...', description: '...' },
+  { id: 1, src: Drawing1, title: 'Drawing 1', description: 'Drawing 1' },
+  { id: 2, src: Drawing2, title: 'Drawing 2', description: 'Drawing 2' },
+  { id: 3, src: Drawing3, title: 'Drawing 3', description: 'Drawing 3' },
+  { id: 4, src: Drawing4, title: 'Drawing 4', description: 'Drawing 4' },
+  { id: 5, src: Drawing5, title: 'Drawing 5', description: 'Drawing 5' },
+  { id: 6, src: Drawing6, title: 'Drawing 6', description: 'Drawing 6' },
+  { id: 7, src: Drawing7, title: 'Drawing 7', description: 'Drawing 7' },
+  { id: 8, src: Drawing8, title: 'Drawing 8', description: 'Drawing 8' },
+  { id: 9, src: Drawing9, title: 'Drawing 9', description: 'Drawing 9' },
+  { id: 10, src: Drawing10, title: 'Drawing 10', description: 'Drawing 10' },
+  { id: 11, src: Drawing11, title: 'Drawing 11', description: 'Drawing 11' },
+  { id: 12, src: Drawing12, title: 'Drawing 12', description: 'Drawing 12' },
+  { id: 13, src: Drawing13, title: 'Drawing 13', description: 'Drawing 13' },
+  { id: 14, src: Drawing14, title: 'Drawing 14', description: 'Drawing 14' },
+  { id: 15, src: Drawing15, title: 'Drawing 15', description: 'Drawing 15' },
+  { id: 16, src: Drawing16, title: 'Drawing 16', description: 'Drawing 16' },
+  { id: 17, src: Drawing17, title: 'Drawing 17', description: 'Drawing 17' },
+  { id: 18, src: Drawing18, title: 'Drawing 18', description: 'Drawing 18' },
+  { id: 19, src: Drawing19, title: 'Drawing 19', description: 'Drawing 19' },
+  { id: 20, src: Drawing20, title: 'Drawing 20', description: 'Drawing 20' },
+  { id: 21, src: Drawing21, title: 'Drawing 21', description: 'Drawing 21' },
+  { id: 22, src: Drawing22, title: 'Drawing 22', description: 'Drawing 22' },
+  { id: 23, src: Drawing23, title: 'Drawing 23', description: 'Drawing 23' },
 ];
 
 // DANIEL TO-DO: Add film photography titles + descriptions here.

@@ -154,7 +154,7 @@ export default function CurriculumVitae() {
           <div style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '2rem'
+            gap: '1rem'
           }}>
             {certificates.map((cert, index) => (
               <img
