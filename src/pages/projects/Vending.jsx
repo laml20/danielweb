@@ -1,5 +1,5 @@
 import ProjectDescription from "../../components/ProjectDescription";
-import VendingMachine from "../../media/projects/VendingMachine.png"
+import VendingMachine from "../../media/projects/VendingMachine1.png"
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
 

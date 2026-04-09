@@ -22,7 +22,7 @@ export default function Header() {
     <style>{`
       .navbar.fixed-top { z-index: 100 !important; }
       .header-nav .nav-link {
-        color: #213547;
+        color: var(--color-text);
       }
       .header-nav .nav-link:hover {
         color: #c1440e !important;
@@ -48,6 +48,9 @@ export default function Header() {
           font-size: 18px !important;
           white-space: nowrap;
         }
+        .header-nav-open .nav-link {
+          text-decoration: underline;
+        }
       }
     `}</style>
     <Navbar
@@ -71,7 +74,7 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto header-nav">
+          <Nav className={`ms-auto header-nav${expanded ? " header-nav-open" : ""}`}>
             <Nav.Link as={Link} to="/cv" onClick={() => setExpanded(false)}>CV</Nav.Link>
             <Nav.Link as={Link} to="/projects" onClick={() => setExpanded(false)}>Projects</Nav.Link>
             <Nav.Link as={Link} to="/creative" onClick={() => setExpanded(false)}>Creative</Nav.Link>

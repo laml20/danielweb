@@ -1,8 +1,32 @@
 import { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { useSearchParams } from 'react-router-dom';
 import paperTexture from '../media/home/paper_texture_tile.jpeg';
 
 // Drawings
+import Drawing1 from '../media/drawings/1.png';
+import Drawing2 from '../media/drawings/2.png';
+import Drawing3 from '../media/drawings/3.png';
+import Drawing4 from '../media/drawings/4.png';
+import Drawing5 from '../media/drawings/5.png';
+import Drawing6 from '../media/drawings/6.png';
+import Drawing7 from '../media/drawings/7.png';
+import Drawing8 from '../media/drawings/8.png'; 
+import Drawing9 from '../media/drawings/9.png';
+import Drawing10 from '../media/drawings/10.png';
+import Drawing11 from '../media/drawings/11.png';
+import Drawing12 from '../media/drawings/12.png';
+import Drawing13 from '../media/drawings/13.png';
+import Drawing14 from '../media/drawings/14.png';
+import Drawing15 from '../media/drawings/15.png';
+import Drawing16 from '../media/drawings/16.png';
+import Drawing17 from '../media/drawings/17.png';
+import Drawing18 from '../media/drawings/18.png';
+import Drawing19 from '../media/drawings/19.png';
+import Drawing20 from '../media/drawings/20.png';
+import Drawing21 from '../media/drawings/21.png';
+import Drawing22 from '../media/drawings/22.png';
+import Drawing23 from '../media/drawings/23.png'; 
 
 // Film Photography
 import Film1 from '../media/film/000000010008.jpg';
@@ -55,7 +79,29 @@ const tabs = [
 
 // DANIEL TO-DO: Add drawing titles + descriptions here.
 const drawingsData = [
-  // { id: 1, src: ..., title: '...', description: '...' },
+  { id: 1, src: Drawing1, title: 'Drawing 1', description: 'Drawing 1' },
+  { id: 2, src: Drawing2, title: 'Drawing 2', description: 'Drawing 2' },
+  { id: 3, src: Drawing3, title: 'Drawing 3', description: 'Drawing 3' },
+  { id: 4, src: Drawing4, title: 'Drawing 4', description: 'Drawing 4' },
+  { id: 5, src: Drawing5, title: 'Drawing 5', description: 'Drawing 5' },
+  { id: 6, src: Drawing6, title: 'Drawing 6', description: 'Drawing 6' },
+  { id: 7, src: Drawing7, title: 'Drawing 7', description: 'Drawing 7' },
+  { id: 8, src: Drawing8, title: 'Drawing 8', description: 'Drawing 8' },
+  { id: 9, src: Drawing9, title: 'Drawing 9', description: 'Drawing 9' },
+  { id: 10, src: Drawing10, title: 'Drawing 10', description: 'Drawing 10' },
+  { id: 11, src: Drawing11, title: 'Drawing 11', description: 'Drawing 11' },
+  { id: 12, src: Drawing12, title: 'Drawing 12', description: 'Drawing 12' },
+  { id: 13, src: Drawing13, title: 'Drawing 13', description: 'Drawing 13' },
+  { id: 14, src: Drawing14, title: 'Drawing 14', description: 'Drawing 14' },
+  { id: 15, src: Drawing15, title: 'Drawing 15', description: 'Drawing 15' },
+  { id: 16, src: Drawing16, title: 'Drawing 16', description: 'Drawing 16' },
+  { id: 17, src: Drawing17, title: 'Drawing 17', description: 'Drawing 17' },
+  { id: 18, src: Drawing18, title: 'Drawing 18', description: 'Drawing 18' },
+  { id: 19, src: Drawing19, title: 'Drawing 19', description: 'Drawing 19' },
+  { id: 20, src: Drawing20, title: 'Drawing 20', description: 'Drawing 20' },
+  { id: 21, src: Drawing21, title: 'Drawing 21', description: 'Drawing 21' },
+  { id: 22, src: Drawing22, title: 'Drawing 22', description: 'Drawing 22' },
+  { id: 23, src: Drawing23, title: 'Drawing 23', description: 'Drawing 23' },
 ];
 
 // DANIEL TO-DO: Add film photography titles + descriptions here.
@@ -91,17 +137,17 @@ const filmData = [
 
 // DANIEL TO-DO: Add digital photography titles + descriptions here.
 const digitalData = [
-  { id: 1, src: LifeAndDeath1, title: 'Life and Death 1', description: 'A photograph capturing the contrast between life and death.' },
-  { id: 2, src: LifeAndDeath2, title: 'Life and Death 2', description: 'Another perspective on the theme of life and death.' },
-  { id: 3, src: Light1, title: 'Light 1', description: 'A simple yet powerful image of light and shadow.' },
-  { id: 4, src: Light2, title: 'Light 2', description: 'A different composition exploring the concept of light.' },
-  { id: 5, src: Object1, title: 'Object 1', description: 'A photograph focusing on the beauty of everyday objects.' },
-  { id: 7, src: Object3, title: 'Object 3', description: 'A creative composition highlighting the shapes of objects.' },
-  { id: 8, src: Scars1, title: 'Scars 1', description: 'An intimate photograph exploring the theme of scars and healing.' },
-  { id: 9, src: Scars2, title: 'Scars 2', description: 'A different perspective on scars and their stories.' },
-  { id: 10, src: Scars3, title: 'Scars 3', description: 'A close-up image focusing on the textures of scars.' },
-  { id: 11, src: Scars4, title: 'Scars 4', description: 'A final photograph in the scars series, capturing the resilience and beauty of healing.' },
-  { id: 6, src: Object2, title: 'Object 2', description: 'Another take on the theme of objects and their forms.' },
+  { id: 1, src: LifeAndDeath1, title: 'Life and Death 1', description: 'Life and Death 1' },
+  { id: 2, src: LifeAndDeath2, title: 'Life and Death 2', description: 'Life and Death 2' },
+  { id: 3, src: Light1, title: 'Light 1', description: 'Light 1' },
+  { id: 4, src: Light2, title: 'Light 2', description: 'Light 2' },
+  { id: 5, src: Object1, title: 'Object 1', description: 'Object 1' },
+  { id: 7, src: Object3, title: 'Object 3', description: 'Object 3' },
+  { id: 8, src: Scars1, title: 'Scars 1', description: 'Scars 1' },
+  { id: 9, src: Scars2, title: 'Scars 2', description: 'Scars 2' },
+  { id: 10, src: Scars3, title: 'Scars 3', description: 'Scars 3' },
+  { id: 11, src: Scars4, title: 'Scars 4', description: 'Scars 4' },
+  { id: 6, src: Object2, title: 'Object 2', description: 'Object 2' },
 ];
 
 // ─── ImageGrid ────────────────────────────────────────────────────────────────
@@ -111,7 +157,7 @@ function ImageGrid({ images, onImageClick }) {
   if (images.length === 0) {
     return (
       <p style={{
-        fontFamily: "'Martian Mono', monospace",
+        fontFamily: "'IBM Plex Mono', monospace",
         color: '#6c757d',
         // fontSize: '0.85rem',
         marginTop: '1.5rem',
@@ -166,7 +212,7 @@ function ImageGrid({ images, onImageClick }) {
             }}>
               <span style={{
                 color: '#fff',
-                fontFamily: "'Martian Mono', monospace",
+                fontFamily: "'IBM Plex Mono', monospace",
                 fontSize: 'calc(0.5rem + 0.2vw)',
                 fontWeight: 'bold',
                 textAlign: 'center',
@@ -197,14 +243,14 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
     return () => window.removeEventListener('keydown', handleKey);
   }, [onClose, onPrev, onNext]);
 
-  return (
+  return createPortal(
     <div
       onClick={onClose}
       style={{
         position: 'fixed',
         inset: 0,
         background: 'rgba(0,0,0,0.88)',
-        zIndex: 1031,
+        zIndex: 9999,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -241,7 +287,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         />
         <div style={{ marginTop: '1rem', textAlign: 'center', color: '#fff' }}>
           <p style={{
-            fontFamily: "'Martian Mono', monospace",
+            fontFamily: "'IBM Plex Mono', monospace",
             fontWeight: 'bold',
             fontSize: 'calc(0.85rem + 0.2vw)',
             margin: '0 0 0.35rem',
@@ -250,7 +296,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
           </p>
           {img.description && (
             <p style={{
-              fontFamily: "'Martian Mono', monospace",
+              fontFamily: "'IBM Plex Mono', monospace",
               fontSize: 'calc(0.75rem + 0.1vw)',
               color: '#ccc',
               margin: 0,
@@ -270,7 +316,8 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       >
         ›
       </button>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -333,7 +380,7 @@ export default function Creative() {
         .creative-nav-tab {
           cursor: pointer;
           font-size: var(--font-nav);
-          font-family: 'Martian Mono', monospace;
+          font-family: 'IBM Plex Mono', monospace;
           color: #6c757d;
           font-weight: normal;
           padding-bottom: 0.5rem;
@@ -380,6 +427,13 @@ export default function Creative() {
           }
           .creative-nav-inner::-webkit-scrollbar { display: none; }
         }
+        .creative-content {
+          animation: creativeFadeIn 0.25s ease;
+        }
+        @keyframes creativeFadeIn {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
       `}</style>
 
       {/* Nav */}
@@ -396,7 +450,7 @@ export default function Creative() {
             <span
               key={tab.id}
               className={`creative-nav-tab${activeTab === tab.id ? ' active' : ''}`}
-              onClick={() => { setActiveTab(tab.id); setSearchParams({ tab: tab.id }); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { setActiveTab(tab.id); setSearchParams({ tab: tab.id }); setLightboxIndex(null); window.scrollTo({ top: 0, behavior: 'instant' }); }}
             >
               {tab.label}
             </span>
@@ -405,12 +459,12 @@ export default function Creative() {
       </div>
 
       {/* Content */}
-      <div style={{ padding: '2rem 3rem 3rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <div key={activeTab} className="creative-content" style={{ padding: '2rem 3rem 3rem', maxWidth: '1200px', margin: '0 auto' }}>
         <p style={{
-          fontFamily: "'Martian Mono', monospace",
+          fontFamily: "'IBM Plex Mono', monospace",
           fontSize: 'calc(0.8rem + 0.2vw)',
-          color: '#213547',
-          marginBottom: '3rem',
+          color: '#3B3B3B',
+          marginBottom: '2rem',
           textAlign: 'center',
         }}>
           {descriptions[activeTab]}

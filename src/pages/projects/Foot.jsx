@@ -1,4 +1,4 @@
-import Daniel from "../../media/home/daniel.png";
+import Icon from "../../media/projects/7.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
@@ -18,7 +18,7 @@ return (
     <ProjectDescription
     title="Research: Team Foot"
     text="A haptic device for transfemoral amputees which provides feedback to improve balance"
-    imageSrc={Daniel}
+    imageSrc={Icon}
     />
 
     <ProjectNav tabs={TABS} />

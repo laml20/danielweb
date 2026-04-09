@@ -28,7 +28,7 @@ return (
         .abtmetextpart button {
           width: auto;
           align-self: flex-start;
-          color: black !important;
+          color: #3B3B3B !important;
         }
 
         .abtmeimgpart {

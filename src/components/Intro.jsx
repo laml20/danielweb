@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Daniel from "../media/home/Daniel2.png";
+import Daniel from "../media/home/Daniel3.png";
 import Rice from "../media/home/Rice5.png";
 
 export default function Intro() {
@@ -40,12 +40,12 @@ return (
           .introtextpart button {
             align-self: flex-start;
             background: rgba(255, 255, 255, 0.8) !important;
-            border: 2px solid black !important;
+            border: 2px solid #3B3B3B !important;
             padding: 0.5rem 1rem !important;
             outline: 8px solid rgba(255, 255, 255, 0.8);
             margin-left: 8px;
             transition: all 0.4s ease;
-            color: black !important;
+            color: #3B3B3B !important;
           }
           .introtextpart button:focus {
             outline: 8px solid rgba(255, 255, 255, 0.75);
@@ -148,11 +148,11 @@ return (
             }
             .intro-below-fold button {
               background: rgba(255, 255, 255, 0.8) !important;
-              border: 2px solid black !important;
+              border: 2px solid #3B3B3B !important;
               padding: 0.5rem 1rem !important;
               outline: 8px solid rgba(255, 255, 255, 0.8);
               transition: all 0.4s ease;
-              color: black !important;
+              color: #3B3B3B !important;
             }
             .intro-below-fold button:focus {
               outline: 8px solid rgba(255, 255, 255, 0.75);

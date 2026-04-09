@@ -1,4 +1,4 @@
-import Daniel from "../../media/home/daniel.png";
+import Icon from "../../media/projects/6.png";
 import ProjectDescription from "../../components/ProjectDescription";
 import CenterSection from "../../components/CenterSection";
 import ProjectNav from "../../components/ProjectNav";
@@ -16,9 +16,9 @@ export default function Glove() {
 return (
 <div>
     <ProjectDescription
-    title="Parkinsons Vibrational Glove"
+    title="Parkinsons Vibrotactile Glove"
     text="A wearable glove based on Stanford research which delivers vibrations to calm tremors"
-    imageSrc={Daniel}
+    imageSrc={Icon}
     />
 
     <ProjectNav tabs={TABS} />

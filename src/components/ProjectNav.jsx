@@ -10,7 +10,8 @@ const ProjectNav = ({ tabs = [] }) => {
     if (element) {
       const headerHeight = document.querySelector('nav')?.offsetHeight || 64;
       const projectNavHeight = document.querySelector('[data-project-nav]')?.offsetHeight || 60;
-      const offset = headerHeight + projectNavHeight;
+      const extraPadding = window.innerWidth >= 992 ? 18 : 0;
+      const offset = headerHeight + projectNavHeight + extraPadding;
       const top = element.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -22,7 +23,7 @@ const ProjectNav = ({ tabs = [] }) => {
         .project-nav-tab {
           cursor: pointer;
           font-size: calc(0.85rem + 0.2vw);
-          font-family: 'Martian Mono', monospace;
+          font-family: 'IBM Plex Mono', monospace;
           color: #6c757d;
           font-weight: normal;
           padding-bottom: 0.5rem;
@@ -57,6 +58,7 @@ const ProjectNav = ({ tabs = [] }) => {
         @media (max-width: 768px) {
           .project-nav-outer {
             padding: 0.75rem 0 0;
+            top: 67px;
           }
           .project-nav-inner {
             flex-wrap: nowrap;

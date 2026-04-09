@@ -8,10 +8,17 @@ import doodle5 from '../media/doodles/5.png';
 import doodle6 from '../media/doodles/6.png';
 import doodle7 from '../media/doodles/7.png';
 import doodle8 from '../media/doodles/8.png';
+import doodle9 from '../media/doodles/9.png';
+import doodle10 from '../media/doodles/10.png';
+import doodle11 from '../media/doodles/11.png';
+import doodle12 from '../media/doodles/12.png';
+import doodle13 from '../media/doodles/13.png';
+import doodle14 from '../media/doodles/14.png';
 
-const ALL_DOODLES = [doodle1, doodle2, doodle3, doodle4, doodle5, doodle6, doodle7, doodle8];
+const ALL_DOODLES = [doodle1, doodle2, doodle3, doodle4, doodle5, doodle6, doodle8, doodle9, doodle10, doodle11, doodle12, doodle14, doodle13];
 
-const SPACING_FACTOR = 1.75; // gap = image size * this
+const SPACING_FACTOR_DEFAULT = 1.75;
+const SPACING_FACTOR_PROJECTS = 1.3;
 const HEADER_OFFSET = 80; // px to skip below header
 
 function seededRng(seed) {
@@ -53,11 +60,12 @@ function generateDoodles(pathname, pageHeight) {
     // cursor is the top edge; shift down by size/2 so center lands below that edge
     const top = cursor + size / 2 + jitter;
     const onLeft = i % 2 === 0;
-    const left = onLeft ? 1 + rng() * 20 : 85 + rng() * 15;
+    const left = onLeft ? 5 + rng() * 12 : 88 + rng() * 12;
     const rotate = Math.floor(rng() * 40) - 20;
-    const opacity = 0.3 + rng() * 0.25;
+    const opacity = 0.25 + rng() * 0.2;
     doodles.push({ src, size, top, left, rotate, opacity, key: i });
-    cursor += size * SPACING_FACTOR;
+    const spacingFactor = pathname.startsWith('/projects/') ? SPACING_FACTOR_PROJECTS : SPACING_FACTOR_DEFAULT;
+    cursor += size * spacingFactor;
     i++;
   }
 
@@ -73,8 +81,8 @@ export default function JournalDoodles() {
 
   useEffect(() => {
     if (!show) return;
+    setPageHeight(0);
     const measure = () => setPageHeight(document.body.scrollHeight);
-    // Wait a frame for page content to paint first
     const raf = requestAnimationFrame(measure);
     const ro = new ResizeObserver(measure);
     ro.observe(document.body);

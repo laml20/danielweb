@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiDownload } from "react-icons/fi";
 import bkgd from "../media/home/background.png";
 
 const cvImages = [
@@ -18,9 +18,11 @@ const certImages = [
 export default function Experience() {
   const [showModal, setShowModal] = useState(false);
   const [modalImages, setModalImages] = useState([]);
+  const [modalDownload, setModalDownload] = useState({ href: "", filename: "", label: "" });
 
-  const openModal = (images) => {
+  const openModal = (images, downloadHref, downloadFilename, downloadLabel) => {
     setModalImages(images);
+    setModalDownload({ href: downloadHref, filename: downloadFilename, label: downloadLabel });
     setShowModal(true);
   };
 
@@ -51,7 +53,7 @@ export default function Experience() {
         }
 
         .experience-section button {
-          color: black;
+          color: #3B3B3B;
         }
 
         .experience-section button { display: inline-flex; align-items: center; }
@@ -92,10 +94,10 @@ export default function Experience() {
       <section className="experience-section">
         <div className="experience-content">
           <h3 className="experience-title">My Experience</h3>
-          <button onClick={() => openModal(cvImages)}>
+          <button onClick={() => openModal(cvImages, "/documents/DanielPlascenciaCV.pdf", "DanielPlascenciaCV.pdf", "Download CV")}>
             Curriculum Vitae <FiArrowUpRight className="exp-btn-icon" size={15} />
           </button>
-          <button onClick={() => openModal(certImages)}>
+          <button onClick={() => openModal(certImages, "/documents/DanielPlascenciaCertificates.pdf", "DanielPlascenciaCertificates.pdf", "Download Certificates")}>
             Certificates <FiArrowUpRight className="exp-btn-icon" size={15} />
           </button>
         </div>
@@ -103,6 +105,13 @@ export default function Experience() {
         {/* Modal */}
         <Modal show={showModal} onHide={closeModal} size="lg" centered>
           <Modal.Header closeButton style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <a
+              href={modalDownload.href}
+              download={modalDownload.filename}
+              style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", color: "#3B3B3B", textDecoration: "none", fontFamily: "monospace", fontSize: "0.9rem", marginLeft: "0.5rem" }}
+            >
+              <FiDownload size={15} /> {modalDownload.label}
+            </a>
           </Modal.Header>
           <Modal.Body style={{ backgroundImage: `url(${bkgd})`, backgroundSize: "cover", backgroundPosition: "center", maxHeight: "80vh", overflowY: "auto" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>

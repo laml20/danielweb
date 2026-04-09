@@ -36,7 +36,7 @@ const ScrollTabs = ({ tabs = [] }) => {
                 cursor: 'pointer',
                 fontSize: 'calc(1rem + .2vw)',
                 fontFamily: 'monospace',
-                color: activeTab === tab.id ? '#213547' : '#6c757d',
+                color: activeTab === tab.id ? '#3B3B3B' : '#6c757d',
                 fontWeight: activeTab === tab.id ? 'bold' : 'normal',
                 paddingBottom: '0.5rem',
                 borderBottom: activeTab === tab.id ? '3px solid #ca40bd' : '3px solid transparent',
@@ -64,7 +64,7 @@ const ScrollTabs = ({ tabs = [] }) => {
             fontSize: '2rem',
             fontWeight: 'bold',
             marginBottom: '1.5rem',
-            color: '#213547'
+            color: '#3B3B3B'
           }}>
             {tab.label}
           </h2>
