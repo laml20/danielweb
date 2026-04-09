@@ -157,7 +157,7 @@ function ImageGrid({ images, onImageClick }) {
   if (images.length === 0) {
     return (
       <p style={{
-        fontFamily: "'Martian Mono', monospace",
+        fontFamily: "'IBM Plex Mono', monospace",
         color: '#6c757d',
         // fontSize: '0.85rem',
         marginTop: '1.5rem',
@@ -212,7 +212,7 @@ function ImageGrid({ images, onImageClick }) {
             }}>
               <span style={{
                 color: '#fff',
-                fontFamily: "'Martian Mono', monospace",
+                fontFamily: "'IBM Plex Mono', monospace",
                 fontSize: 'calc(0.5rem + 0.2vw)',
                 fontWeight: 'bold',
                 textAlign: 'center',
@@ -287,7 +287,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         />
         <div style={{ marginTop: '1rem', textAlign: 'center', color: '#fff' }}>
           <p style={{
-            fontFamily: "'Martian Mono', monospace",
+            fontFamily: "'IBM Plex Mono', monospace",
             fontWeight: 'bold',
             fontSize: 'calc(0.85rem + 0.2vw)',
             margin: '0 0 0.35rem',
@@ -296,7 +296,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
           </p>
           {img.description && (
             <p style={{
-              fontFamily: "'Martian Mono', monospace",
+              fontFamily: "'IBM Plex Mono', monospace",
               fontSize: 'calc(0.75rem + 0.1vw)',
               color: '#ccc',
               margin: 0,
@@ -380,7 +380,7 @@ export default function Creative() {
         .creative-nav-tab {
           cursor: pointer;
           font-size: var(--font-nav);
-          font-family: 'Martian Mono', monospace;
+          font-family: 'IBM Plex Mono', monospace;
           color: #6c757d;
           font-weight: normal;
           padding-bottom: 0.5rem;
@@ -454,7 +454,7 @@ export default function Creative() {
       {/* Content */}
       <div style={{ padding: '2rem 3rem 3rem', maxWidth: '1200px', margin: '0 auto' }}>
         <p style={{
-          fontFamily: "'Martian Mono', monospace",
+          fontFamily: "'IBM Plex Mono', monospace",
           fontSize: 'calc(0.8rem + 0.2vw)',
           color: '#213547',
           marginBottom: '3rem',

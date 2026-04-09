@@ -1,10 +1,12 @@
 
 html {
   overflow-x: hidden;
+  background-color: #f7f3eb;
 }
 
 body {
   color: var(--color-text);
+  background-color: #f7f3eb;
 }
 
 body button {

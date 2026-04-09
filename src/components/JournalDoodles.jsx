@@ -60,7 +60,7 @@ function generateDoodles(pathname, pageHeight) {
     // cursor is the top edge; shift down by size/2 so center lands below that edge
     const top = cursor + size / 2 + jitter;
     const onLeft = i % 2 === 0;
-    const left = onLeft ? 5 + rng() * 12 : 83 + rng() * 12;
+    const left = onLeft ? 5 + rng() * 12 : 88 + rng() * 12;
     const rotate = Math.floor(rng() * 40) - 20;
     const opacity = 0.25 + rng() * 0.2;
     doodles.push({ src, size, top, left, rotate, opacity, key: i });
