@@ -45,7 +45,7 @@ export default function CurriculumVitae() {
       maxWidth: '1000px'
     }}>
       <style>{`
-        .cv-download-btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; color: black; display: inline-flex; align-items: center; }
+        .cv-download-btn { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; color: #3B3B3B; display: inline-flex; align-items: center; }
         .cv-download-btn::after, .cv-download-btn:hover::after { content: '' !important; margin-left: 0 !important; }
         .cv-download-btn .cv-btn-icon { opacity: 0; width: 0; overflow: hidden; margin-left: 0; transition: opacity 0.2s ease, width 0.2s ease, margin-left 0.2s ease, transform 0.2s ease; }
         .cv-download-btn:hover .cv-btn-icon { opacity: 1; width: 15px; margin-left: 0.4rem; transform: translateY(2px); }

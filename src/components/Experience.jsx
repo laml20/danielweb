@@ -51,7 +51,7 @@ export default function Experience() {
         }
 
         .experience-section button {
-          color: black;
+          color: #3B3B3B;
         }
 
         .experience-section button { display: inline-flex; align-items: center; }

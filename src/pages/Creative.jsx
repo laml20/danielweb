@@ -456,8 +456,8 @@ export default function Creative() {
         <p style={{
           fontFamily: "'IBM Plex Mono', monospace",
           fontSize: 'calc(0.8rem + 0.2vw)',
-          color: '#213547',
-          marginBottom: '3rem',
+          color: '#3B3B3B',
+          marginBottom: '2rem',
           textAlign: 'center',
         }}>
           {descriptions[activeTab]}

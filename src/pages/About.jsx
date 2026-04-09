@@ -71,7 +71,7 @@ export default function About() {
         .contact-form input,
         .contact-form textarea {
           background: transparent;
-          border: 2px solid black;
+          border: 2px solid #3B3B3B;
           outline: 8px solid transparent;
           padding: 0.5rem 1rem;
           font-size: inherit;
@@ -94,9 +94,9 @@ export default function About() {
         .contact-send-btn {
           align-self: flex-start;
           background: transparent !important;
-          border: 2px solid black !important;
+          border: 2px solid #3B3B3B !important;
           padding: 0.5rem 1rem !important;
-          color: black !important;
+          color: #3B3B3B !important;
           font-family: inherit;
           cursor: pointer;
           transition: all 0.4s ease;

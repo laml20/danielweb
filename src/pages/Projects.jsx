@@ -124,7 +124,7 @@ const Projects = () => {
 
   return(
   <Container className="projects-container" style={{paddingTop: '3%', paddingBottom: '3%'}}>
-      <h1>Projects</h1>
+      <h1><u>Projects</u></h1>
       <section className="projects-gallery py-5">
         {projectRows.map((row, rowIndex) => (
         <Row key={rowIndex} className="g-3 mb-3 justify-content-center">
